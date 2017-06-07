@@ -34,8 +34,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "Level1";
-            this.Size = new System.Drawing.Size(595, 432);
+            this.Size = new System.Drawing.Size(1000, 600);
+            this.Load += new System.EventHandler(this.Level1_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Level1_Paint);
             this.ResumeLayout(false);
 
         }
