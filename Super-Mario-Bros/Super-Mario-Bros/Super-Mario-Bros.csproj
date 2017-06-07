@@ -90,14 +90,55 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\FirstLevelBackground.png" />
+    <None Include="Resources\PlusHills.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Mario.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Super-Mario-Bros-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mushroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoreHappyHills.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MisteryBox.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MetalPlatforms5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoteBlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Door.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HillyBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioBros3Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\overworld_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FirstLevelBackground.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
