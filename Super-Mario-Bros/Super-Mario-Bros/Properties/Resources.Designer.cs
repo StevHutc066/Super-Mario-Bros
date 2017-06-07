@@ -133,16 +133,6 @@ namespace Super_Mario_Bros.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MarioBros3Background {
-            get {
-                object obj = ResourceManager.GetObject("MarioBros3Background", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap MetalPlatforms5 {
             get {
                 object obj = ResourceManager.GetObject("MetalPlatforms5", resourceCulture);
@@ -203,9 +193,9 @@ namespace Super_Mario_Bros.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Super_Mario_Bros_3 {
+        internal static System.Drawing.Bitmap SuperMarioBros {
             get {
-                object obj = ResourceManager.GetObject("Super_Mario_Bros_3", resourceCulture);
+                object obj = ResourceManager.GetObject("SuperMarioBros", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
