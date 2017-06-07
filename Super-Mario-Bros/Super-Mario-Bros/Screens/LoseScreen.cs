@@ -181,10 +181,11 @@ namespace Super_Mario_Bros.Screens
                     {
                         // Goes to the menu screen
                         Form form = this.FindForm();
-                        MenuScreen ms = new MenuScreen();
-
+                        Screens.MenuScreen ms = new Screens.MenuScreen();
+                        
                         form.Controls.Add(ms);
                         form.Controls.Remove(this);
+                        ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
                     }
                     break;
             }
