@@ -39,18 +39,18 @@
             // 
             this.gameOverLabel.AutoSize = true;
             this.gameOverLabel.BackColor = System.Drawing.Color.Transparent;
-            this.gameOverLabel.Font = new System.Drawing.Font("Papyrus", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameOverLabel.Font = new System.Drawing.Font("Segoe Script", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameOverLabel.ForeColor = System.Drawing.Color.Maroon;
             this.gameOverLabel.Location = new System.Drawing.Point(295, 34);
             this.gameOverLabel.Name = "gameOverLabel";
-            this.gameOverLabel.Size = new System.Drawing.Size(410, 76);
+            this.gameOverLabel.Size = new System.Drawing.Size(367, 76);
             this.gameOverLabel.TabIndex = 0;
             this.gameOverLabel.Text = "GAME OVER";
             // 
             // pointsOutput
             // 
             this.pointsOutput.BackColor = System.Drawing.Color.Transparent;
-            this.pointsOutput.Font = new System.Drawing.Font("Papyrus", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pointsOutput.Font = new System.Drawing.Font("Segoe Script", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pointsOutput.ForeColor = System.Drawing.Color.Maroon;
             this.pointsOutput.Location = new System.Drawing.Point(336, 262);
             this.pointsOutput.Name = "pointsOutput";
@@ -62,11 +62,11 @@
             // 
             this.nameText3.AutoSize = true;
             this.nameText3.BackColor = System.Drawing.Color.Transparent;
-            this.nameText3.Font = new System.Drawing.Font("Papyrus", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameText3.Font = new System.Drawing.Font("Segoe Script", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameText3.ForeColor = System.Drawing.Color.Red;
             this.nameText3.Location = new System.Drawing.Point(202, 274);
             this.nameText3.Name = "nameText3";
-            this.nameText3.Size = new System.Drawing.Size(61, 58);
+            this.nameText3.Size = new System.Drawing.Size(73, 76);
             this.nameText3.TabIndex = 8;
             this.nameText3.Text = "A";
             this.nameText3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -75,11 +75,11 @@
             // 
             this.nameText2.AutoSize = true;
             this.nameText2.BackColor = System.Drawing.Color.Transparent;
-            this.nameText2.Font = new System.Drawing.Font("Papyrus", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameText2.Font = new System.Drawing.Font("Segoe Script", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameText2.ForeColor = System.Drawing.Color.Red;
             this.nameText2.Location = new System.Drawing.Point(135, 274);
             this.nameText2.Name = "nameText2";
-            this.nameText2.Size = new System.Drawing.Size(61, 58);
+            this.nameText2.Size = new System.Drawing.Size(73, 76);
             this.nameText2.TabIndex = 7;
             this.nameText2.Text = "A";
             this.nameText2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -88,11 +88,11 @@
             // 
             this.nameText1.AutoSize = true;
             this.nameText1.BackColor = System.Drawing.Color.Transparent;
-            this.nameText1.Font = new System.Drawing.Font("Papyrus", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameText1.Font = new System.Drawing.Font("Segoe Script", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameText1.ForeColor = System.Drawing.Color.White;
             this.nameText1.Location = new System.Drawing.Point(68, 274);
             this.nameText1.Name = "nameText1";
-            this.nameText1.Size = new System.Drawing.Size(61, 58);
+            this.nameText1.Size = new System.Drawing.Size(73, 76);
             this.nameText1.TabIndex = 6;
             this.nameText1.Text = "A";
             this.nameText1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
