@@ -103,7 +103,7 @@ namespace Super_Mario_Bros.Screens
             switch (selected)
             {
                 case 0:
-                    nameText1.ForeColor = Color.Maroon;
+                    nameText1.ForeColor = Color.White;
 
                     if (upArrowDown == true)
                     {
@@ -127,7 +127,7 @@ namespace Super_Mario_Bros.Screens
                     break;
 
                 case 1:
-                    nameText2.ForeColor = Color.Maroon;
+                    nameText2.ForeColor = Color.White;
 
                     if (upArrowDown == true)
                     {
@@ -151,7 +151,7 @@ namespace Super_Mario_Bros.Screens
                     break;
 
                 case 2:
-                    nameText3.ForeColor = Color.Maroon;
+                    nameText3.ForeColor = Color.White;
 
                     if (upArrowDown == true)
                     {
@@ -175,7 +175,7 @@ namespace Super_Mario_Bros.Screens
                     break;
 
                 case 3:
-                    menuButton.ForeColor = Color.Maroon;
+                    menuButton.ForeColor = Color.White;
 
                     if (spaceDown == true)
                     {
@@ -194,19 +194,19 @@ namespace Super_Mario_Bros.Screens
                 switch (lastSelected)
                 {
                     case 0:
-                        nameText1.ForeColor = Color.White;
+                        nameText1.ForeColor = Color.Maroon;
                         break;
 
                     case 1:
-                        nameText2.ForeColor = Color.White;
+                        nameText2.ForeColor = Color.Maroon;
                         break;
 
                     case 2:
-                        nameText3.ForeColor = Color.White;
+                        nameText3.ForeColor = Color.Maroon;
                         break;
 
                     case 3:
-                        menuButton.ForeColor = Color.White;
+                        menuButton.ForeColor = Color.Maroon;
                         break;
                 }
             }
