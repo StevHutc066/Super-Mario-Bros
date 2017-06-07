@@ -12,9 +12,8 @@ namespace Super_Mario_Bros.Screens
 {
     public partial class LoseScreen : UserControl
     {
-        Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, spaceDown;
+        Boolean lastArrowDown, leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, spaceDown;
         int index1, index2, index3, selected, lastSelected;
-        bool lastArrowDown;
 
         private void LoseScreen_KeyUp(object sender, KeyEventArgs e)
         {
@@ -77,7 +76,7 @@ namespace Super_Mario_Bros.Screens
             {
                 if (rightArrowDown == true)
                 {
-                    if (selected == 4)
+                    if (selected == 3)
                     {
                         selected = 0;
                     }
@@ -91,7 +90,7 @@ namespace Super_Mario_Bros.Screens
                 {
                     if (selected == 0)
                     {
-                        selected = 4;
+                        selected = 3;
                     }
                     else
                     {
@@ -103,7 +102,7 @@ namespace Super_Mario_Bros.Screens
             switch (selected)
             {
                 case 0:
-                    nameText1.ForeColor = Color.White;
+                    nameText1.ForeColor = Color.Maroon;
 
                     if (upArrowDown == true)
                     {
@@ -127,7 +126,7 @@ namespace Super_Mario_Bros.Screens
                     break;
 
                 case 1:
-                    nameText2.ForeColor = Color.White;
+                    nameText2.ForeColor = Color.Maroon;
 
                     if (upArrowDown == true)
                     {
@@ -151,7 +150,7 @@ namespace Super_Mario_Bros.Screens
                     break;
 
                 case 2:
-                    nameText3.ForeColor = Color.White;
+                    nameText3.ForeColor = Color.Maroon;
 
                     if (upArrowDown == true)
                     {
@@ -175,13 +174,15 @@ namespace Super_Mario_Bros.Screens
                     break;
 
                 case 3:
-                    menuButton.ForeColor = Color.White;
+                    menuButton.ForeColor = Color.Maroon;
 
                     if (spaceDown == true)
                     {
                         // Goes to the menu screen
                         Form form = this.FindForm();
                         MenuScreen ms = new MenuScreen();
+
+                        ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
 
                         form.Controls.Add(ms);
                         form.Controls.Remove(this);
@@ -194,19 +195,19 @@ namespace Super_Mario_Bros.Screens
                 switch (lastSelected)
                 {
                     case 0:
-                        nameText1.ForeColor = Color.Maroon;
+                        nameText1.ForeColor = Color.FromArgb(128, 128, 255);
                         break;
 
                     case 1:
-                        nameText2.ForeColor = Color.Maroon;
+                        nameText2.ForeColor = Color.FromArgb(128, 128, 255);
                         break;
 
                     case 2:
-                        nameText3.ForeColor = Color.Maroon;
+                        nameText3.ForeColor = Color.FromArgb(128, 128, 255);
                         break;
 
                     case 3:
-                        menuButton.ForeColor = Color.Maroon;
+                        menuButton.ForeColor = Color.FromArgb(128, 128, 255);
                         break;
                 }
             }
