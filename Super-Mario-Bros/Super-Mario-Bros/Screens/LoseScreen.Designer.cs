@@ -33,6 +33,7 @@
             this.nameText3 = new System.Windows.Forms.Label();
             this.nameText2 = new System.Windows.Forms.Label();
             this.nameText1 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // gameOverLabel
@@ -52,9 +53,9 @@
             this.pointsOutput.BackColor = System.Drawing.Color.Transparent;
             this.pointsOutput.Font = new System.Drawing.Font("Papyrus", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pointsOutput.ForeColor = System.Drawing.Color.Maroon;
-            this.pointsOutput.Location = new System.Drawing.Point(336, 262);
+            this.pointsOutput.Location = new System.Drawing.Point(395, 262);
             this.pointsOutput.Name = "pointsOutput";
-            this.pointsOutput.Size = new System.Drawing.Size(328, 76);
+            this.pointsOutput.Size = new System.Drawing.Size(590, 76);
             this.pointsOutput.TabIndex = 1;
             this.pointsOutput.Text = "Score: 12345";
             // 
@@ -63,8 +64,8 @@
             this.nameText3.AutoSize = true;
             this.nameText3.BackColor = System.Drawing.Color.Transparent;
             this.nameText3.Font = new System.Drawing.Font("Papyrus", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameText3.ForeColor = System.Drawing.Color.Red;
-            this.nameText3.Location = new System.Drawing.Point(202, 274);
+            this.nameText3.ForeColor = System.Drawing.Color.Maroon;
+            this.nameText3.Location = new System.Drawing.Point(261, 274);
             this.nameText3.Name = "nameText3";
             this.nameText3.Size = new System.Drawing.Size(61, 58);
             this.nameText3.TabIndex = 8;
@@ -76,8 +77,8 @@
             this.nameText2.AutoSize = true;
             this.nameText2.BackColor = System.Drawing.Color.Transparent;
             this.nameText2.Font = new System.Drawing.Font("Papyrus", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameText2.ForeColor = System.Drawing.Color.Red;
-            this.nameText2.Location = new System.Drawing.Point(135, 274);
+            this.nameText2.ForeColor = System.Drawing.Color.Maroon;
+            this.nameText2.Location = new System.Drawing.Point(194, 274);
             this.nameText2.Name = "nameText2";
             this.nameText2.Size = new System.Drawing.Size(61, 58);
             this.nameText2.TabIndex = 7;
@@ -90,18 +91,31 @@
             this.nameText1.BackColor = System.Drawing.Color.Transparent;
             this.nameText1.Font = new System.Drawing.Font("Papyrus", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameText1.ForeColor = System.Drawing.Color.White;
-            this.nameText1.Location = new System.Drawing.Point(68, 274);
+            this.nameText1.Location = new System.Drawing.Point(127, 274);
             this.nameText1.Name = "nameText1";
             this.nameText1.Size = new System.Drawing.Size(61, 58);
             this.nameText1.TabIndex = 6;
             this.nameText1.Text = "A";
             this.nameText1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Papyrus", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(769, 476);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(206, 100);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Menu";
+            // 
             // LoseScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.nameText3);
             this.Controls.Add(this.nameText2);
             this.Controls.Add(this.nameText1);
@@ -121,5 +135,6 @@
         private System.Windows.Forms.Label nameText3;
         private System.Windows.Forms.Label nameText2;
         private System.Windows.Forms.Label nameText1;
+        private System.Windows.Forms.Label label1;
     }
 }
