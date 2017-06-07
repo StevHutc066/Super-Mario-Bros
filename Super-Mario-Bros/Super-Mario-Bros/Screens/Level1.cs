@@ -16,5 +16,15 @@ namespace Super_Mario_Bros.Screens
         {
             InitializeComponent();
         }
+
+        private void Level1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Level1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
