@@ -213,9 +213,39 @@ namespace Super_Mario_Bros.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Triangle {
+        internal static System.Drawing.Bitmap TriangleDown {
             get {
-                object obj = ResourceManager.GetObject("Triangle", resourceCulture);
+                object obj = ResourceManager.GetObject("TriangleDown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TriangleLeft {
+            get {
+                object obj = ResourceManager.GetObject("TriangleLeft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TriangleRight {
+            get {
+                object obj = ResourceManager.GetObject("TriangleRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TriangleUp {
+            get {
+                object obj = ResourceManager.GetObject("TriangleUp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

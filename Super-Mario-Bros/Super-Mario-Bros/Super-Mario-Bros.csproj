@@ -175,10 +175,22 @@
     <None Include="Resources\HIghScore.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\HighScoreScreen.jpg" />
+    <None Include="Resources\Triangle.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Triangle.png" />
+    <None Include="Resources\TriangleRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TriangleLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TriangleDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TriangleUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HighScoreScreen.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
