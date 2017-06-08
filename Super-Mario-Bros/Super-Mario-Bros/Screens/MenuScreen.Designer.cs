@@ -38,7 +38,7 @@
             this.playButton.AutoSize = true;
             this.playButton.BackColor = System.Drawing.Color.Transparent;
             this.playButton.Font = new System.Drawing.Font("Segoe Script", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.playButton.ForeColor = System.Drawing.Color.Red;
             this.playButton.Location = new System.Drawing.Point(194, 382);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(150, 80);
@@ -50,7 +50,7 @@
             this.exitButton.AutoSize = true;
             this.exitButton.BackColor = System.Drawing.Color.Transparent;
             this.exitButton.Font = new System.Drawing.Font("Segoe Script", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.exitButton.ForeColor = System.Drawing.Color.Blue;
             this.exitButton.Location = new System.Drawing.Point(660, 382);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(146, 80);
@@ -62,8 +62,8 @@
             this.scoresButton.AutoSize = true;
             this.scoresButton.BackColor = System.Drawing.Color.Transparent;
             this.scoresButton.Font = new System.Drawing.Font("Segoe Script", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoresButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.scoresButton.Location = new System.Drawing.Point(409, 280);
+            this.scoresButton.ForeColor = System.Drawing.Color.Blue;
+            this.scoresButton.Location = new System.Drawing.Point(414, 302);
             this.scoresButton.Name = "scoresButton";
             this.scoresButton.Size = new System.Drawing.Size(183, 80);
             this.scoresButton.TabIndex = 2;
