@@ -113,6 +113,16 @@ namespace Super_Mario_Bros.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HighScore {
+            get {
+                object obj = ResourceManager.GetObject("HighScore", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HillyBackground {
             get {
                 object obj = ResourceManager.GetObject("HillyBackground", resourceCulture);
