@@ -178,14 +178,7 @@ namespace Super_Mario_Bros.Screens
 
                     if (spaceDown == true)
                     {
-                        // Goes to the menu screen
-                        Form form = this.FindForm();
-                        MenuScreen ms = new MenuScreen();
-
-                        ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
-
-                        form.Controls.Add(ms);
-                        form.Controls.Remove(this);
+                        //Classes.Functions.ChangeScreen(this.FindForm);
                     }
                     break;
             }
