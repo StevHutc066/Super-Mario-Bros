@@ -102,7 +102,7 @@ namespace Super_Mario_Bros.Screens
             switch (selected)
             {
                 case 0:
-                    nameText1.ForeColor = Color.Maroon;
+                    nameText1.ForeColor = Color.Red;
 
                     if (upArrowDown == true)
                     {
@@ -126,7 +126,7 @@ namespace Super_Mario_Bros.Screens
                     break;
 
                 case 1:
-                    nameText2.ForeColor = Color.Maroon;
+                    nameText2.ForeColor = Color.Red;
 
                     if (upArrowDown == true)
                     {
@@ -150,7 +150,7 @@ namespace Super_Mario_Bros.Screens
                     break;
 
                 case 2:
-                    nameText3.ForeColor = Color.Maroon;
+                    nameText3.ForeColor = Color.Red;
 
                     if (upArrowDown == true)
                     {
@@ -174,7 +174,7 @@ namespace Super_Mario_Bros.Screens
                     break;
 
                 case 3:
-                    menuButton.ForeColor = Color.Maroon;
+                    menuButton.ForeColor = Color.Red;
 
                     if (spaceDown == true)
                     {
