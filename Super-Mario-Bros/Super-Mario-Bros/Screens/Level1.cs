@@ -17,6 +17,14 @@ namespace Super_Mario_Bros.Screens
             InitializeComponent();
         }
 
+        Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, spaceDown, escapeDown;
+
+        private void gameTimer_Tick(object sender, EventArgs e)
+        {
+            if (rightArrowDown)
+                marioBox.Location = new Point(20,20);
+        }
+
         private void Level1_Load(object sender, EventArgs e)
         {
 
@@ -25,6 +33,33 @@ namespace Super_Mario_Bros.Screens
         private void Level1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Level1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Left:
+                    leftArrowDown = true;
+                    break;
+                case Keys.Down:
+                    downArrowDown = true;
+                    break;
+                case Keys.Right:
+                    rightArrowDown = true;
+                    break;
+                case Keys.Up:
+                    upArrowDown = true;
+                    break;
+                case Keys.Space:
+                    spaceDown = true;
+                    break;
+                case Keys.Escape:
+                    escapeDown = true;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
