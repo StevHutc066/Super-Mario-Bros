@@ -13,13 +13,13 @@ namespace Super_Mario_Bros.Classes
 
         public void ChangeScreen(Form fm)
         {
-            fm = this.FindForm();
+            /*fm = this.FindForm();
             MenuScreen ms = new MenuScreen();
 
             ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
 
             form.Controls.Add(ms);
-            form.Controls.Remove(this);
+            form.Controls.Remove(this);*/
         }
     }
 }
