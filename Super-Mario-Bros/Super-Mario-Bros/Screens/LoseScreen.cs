@@ -195,19 +195,19 @@ namespace Super_Mario_Bros.Screens
                 switch (lastSelected)
                 {
                     case 0:
-                        nameText1.ForeColor = Color.FromArgb(128, 128, 255);
+                        nameText1.ForeColor = Color.Blue;
                         break;
 
                     case 1:
-                        nameText2.ForeColor = Color.FromArgb(128, 128, 255);
+                        nameText2.ForeColor = Color.Blue;
                         break;
 
                     case 2:
-                        nameText3.ForeColor = Color.FromArgb(128, 128, 255);
+                        nameText3.ForeColor = Color.Blue;
                         break;
 
                     case 3:
-                        menuButton.ForeColor = Color.FromArgb(128, 128, 255);
+                        menuButton.ForeColor = Color.Blue;
                         break;
                 }
             }

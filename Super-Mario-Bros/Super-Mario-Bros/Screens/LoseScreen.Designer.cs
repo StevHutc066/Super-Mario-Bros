@@ -41,7 +41,7 @@
             this.gameOverLabel.AutoSize = true;
             this.gameOverLabel.BackColor = System.Drawing.Color.Transparent;
             this.gameOverLabel.Font = new System.Drawing.Font("Segoe Script", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameOverLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.gameOverLabel.ForeColor = System.Drawing.Color.Blue;
             this.gameOverLabel.Location = new System.Drawing.Point(245, 34);
             this.gameOverLabel.Name = "gameOverLabel";
             this.gameOverLabel.Size = new System.Drawing.Size(511, 106);
@@ -52,7 +52,7 @@
             // 
             this.pointsOutput.BackColor = System.Drawing.Color.Transparent;
             this.pointsOutput.Font = new System.Drawing.Font("Segoe Script", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pointsOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.pointsOutput.ForeColor = System.Drawing.Color.Blue;
             this.pointsOutput.Location = new System.Drawing.Point(367, 274);
             this.pointsOutput.Name = "pointsOutput";
             this.pointsOutput.Size = new System.Drawing.Size(630, 76);
@@ -64,7 +64,7 @@
             this.nameText3.AutoSize = true;
             this.nameText3.BackColor = System.Drawing.Color.Transparent;
             this.nameText3.Font = new System.Drawing.Font("Segoe Script", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameText3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.nameText3.ForeColor = System.Drawing.Color.Blue;
             this.nameText3.Location = new System.Drawing.Point(236, 274);
             this.nameText3.Name = "nameText3";
             this.nameText3.Size = new System.Drawing.Size(97, 102);
@@ -77,7 +77,7 @@
             this.nameText2.AutoSize = true;
             this.nameText2.BackColor = System.Drawing.Color.Transparent;
             this.nameText2.Font = new System.Drawing.Font("Segoe Script", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameText2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.nameText2.ForeColor = System.Drawing.Color.Blue;
             this.nameText2.Location = new System.Drawing.Point(135, 274);
             this.nameText2.Name = "nameText2";
             this.nameText2.Size = new System.Drawing.Size(97, 102);
@@ -103,7 +103,7 @@
             this.menuButton.AutoSize = true;
             this.menuButton.BackColor = System.Drawing.Color.Transparent;
             this.menuButton.Font = new System.Drawing.Font("Segoe Script", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.menuButton.ForeColor = System.Drawing.Color.Blue;
             this.menuButton.Location = new System.Drawing.Point(383, 483);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(234, 102);

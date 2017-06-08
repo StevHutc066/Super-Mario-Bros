@@ -125,15 +125,15 @@ namespace Super_Mario_Bros.Screens
                     switch (lastSelected)
                     {
                         case 0:
-                            playButton.ForeColor = Color.FromArgb(128, 128, 255);
+                            playButton.ForeColor = Color.Blue;
                             break;
 
                         case 1:
-                            scoresButton.ForeColor = Color.FromArgb(128, 128, 255);
+                            scoresButton.ForeColor = Color.Blue;
                             break;
 
                         case 2:
-                            exitButton.ForeColor = Color.FromArgb(128, 128, 255);
+                            exitButton.ForeColor = Color.Blue;
                             break;
                     }
                 }
