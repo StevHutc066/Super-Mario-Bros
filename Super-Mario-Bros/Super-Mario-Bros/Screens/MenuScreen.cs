@@ -76,7 +76,7 @@ namespace Super_Mario_Bros.Screens
                 switch (selected)
                 {
                     case 0:
-                        playButton.ForeColor = Color.Maroon;
+                        playButton.ForeColor = Color.Red;
 
                         if (spaceDown == true)
                         {
@@ -93,7 +93,7 @@ namespace Super_Mario_Bros.Screens
                         break;
 
                     case 1:
-                        scoresButton.ForeColor = Color.Maroon;
+                        scoresButton.ForeColor = Color.Red;
 
                         if (spaceDown == true)
                         {
@@ -110,7 +110,7 @@ namespace Super_Mario_Bros.Screens
                         break;
 
                     case 2:
-                        exitButton.ForeColor = Color.Maroon;
+                        exitButton.ForeColor = Color.Red;
 
                         if (spaceDown == true)
                         {

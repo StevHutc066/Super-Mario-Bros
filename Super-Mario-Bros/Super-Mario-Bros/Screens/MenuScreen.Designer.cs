@@ -62,7 +62,7 @@
             this.scoresButton.AutoSize = true;
             this.scoresButton.BackColor = System.Drawing.Color.Transparent;
             this.scoresButton.Font = new System.Drawing.Font("Segoe Script", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoresButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.scoresButton.ForeColor = System.Drawing.Color.Blue;
             this.scoresButton.Location = new System.Drawing.Point(409, 280);
             this.scoresButton.Name = "scoresButton";
             this.scoresButton.Size = new System.Drawing.Size(183, 80);

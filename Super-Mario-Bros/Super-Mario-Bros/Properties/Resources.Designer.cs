@@ -111,6 +111,15 @@ namespace Super_Mario_Bros.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string h {
+            get {
+                return ResourceManager.GetString("h", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap HillyBackground {
@@ -187,6 +196,15 @@ namespace Super_Mario_Bros.Properties {
             get {
                 object obj = ResourceManager.GetObject("overworld_bg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string String {
+            get {
+                return ResourceManager.GetString("String", resourceCulture);
             }
         }
         
