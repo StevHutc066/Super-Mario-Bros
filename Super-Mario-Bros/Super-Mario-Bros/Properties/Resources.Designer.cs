@@ -111,20 +111,11 @@ namespace Super_Mario_Bros.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        internal static string h {
-            get {
-                return ResourceManager.GetString("h", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap HighScore {
+        internal static System.Drawing.Bitmap HighScoreScreen {
             get {
-                object obj = ResourceManager.GetObject("HighScore", resourceCulture);
+                object obj = ResourceManager.GetObject("HighScoreScreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -210,20 +201,21 @@ namespace Super_Mario_Bros.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static string String {
+        internal static System.Drawing.Bitmap SuperMarioBros {
             get {
-                return ResourceManager.GetString("String", resourceCulture);
+                object obj = ResourceManager.GetObject("SuperMarioBros", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SuperMarioBros {
+        internal static System.Drawing.Bitmap Triangle {
             get {
-                object obj = ResourceManager.GetObject("SuperMarioBros", resourceCulture);
+                object obj = ResourceManager.GetObject("Triangle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
