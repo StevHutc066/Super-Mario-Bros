@@ -74,7 +74,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Super_Mario_Bros.Properties.Resources.Triangle;
             this.pictureBox1.Location = new System.Drawing.Point(71, 361);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(141, 101);

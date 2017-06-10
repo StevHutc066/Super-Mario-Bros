@@ -19,13 +19,11 @@ namespace Super_Mario_Bros
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Form form = this.FindForm();
+
             Screens.MenuScreen ms = new Screens.MenuScreen();
+            this.Controls.Add(ms);
 
             ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
-
-            form.Controls.Add(ms);
-            form.Controls.Remove(this);      
         }
     }
 }

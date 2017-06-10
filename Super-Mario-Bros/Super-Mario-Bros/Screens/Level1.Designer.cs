@@ -37,7 +37,6 @@
             // marioBox
             // 
             this.marioBox.BackColor = System.Drawing.Color.Transparent;
-            this.marioBox.Image = global::Super_Mario_Bros.Properties.Resources.Mario;
             this.marioBox.Location = new System.Drawing.Point(3, 395);
             this.marioBox.Name = "marioBox";
             this.marioBox.Size = new System.Drawing.Size(81, 117);
