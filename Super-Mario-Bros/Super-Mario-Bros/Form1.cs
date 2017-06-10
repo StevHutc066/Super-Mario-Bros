@@ -24,6 +24,7 @@ namespace Super_Mario_Bros
             this.Controls.Add(ms);
 
             ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
+            
         }
     }
 }

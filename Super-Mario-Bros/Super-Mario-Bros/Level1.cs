@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Super_Mario_Bros.Screens
+namespace Super_Mario_Bros
 {
     public partial class Level1 : UserControl
     {
+
         Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, spaceDown, escapeDown;
-        Mario Mario;
+        public static Mario mario;
 
         public Level1()
         {
@@ -27,18 +28,18 @@ namespace Super_Mario_Bros.Screens
 
         public static void OnStart()
         {
-            Mario = new Mario(3, 390, 2, 2, "big");
+            mario = new Mario(3, 390, 2, 2, "big");
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
             if (rightArrowDown)
-                marioBox.Location = new Point(20,20);
+                mario.x++;
         }
 
         private void Level1_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.DrawImage(Properties.Resources.Mario, 1, 390, 81, 117);
+            e.Graphics.DrawImage(Properties.Resources.Mario, mario.x, mario.y, mario.width, mario.height);
         }
 
         private void Level1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -67,5 +68,6 @@ namespace Super_Mario_Bros.Screens
                     break;
             }
         }
+
     }
 }

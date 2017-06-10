@@ -52,15 +52,15 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Mario.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Screens\Level1.cs">
+    <Compile Include="Level1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Screens\Level1.Designer.cs">
+    <Compile Include="Level1.Designer.cs">
       <DependentUpon>Level1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mario.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Screens\LoseScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -82,6 +82,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Level1.resx">
+      <DependentUpon>Level1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -92,9 +95,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Screens\Level1.resx">
-      <DependentUpon>Level1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Screens\LoseScreen.resx">
       <DependentUpon>LoseScreen.cs</DependentUpon>
     </EmbeddedResource>

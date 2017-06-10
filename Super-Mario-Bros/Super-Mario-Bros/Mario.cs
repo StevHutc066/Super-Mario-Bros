@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Super_Mario_Bros
 {
-    class Mario
+    public class Mario
     {
         public int x, y, xSpeed, ySpeed, width, height;
         string state;
