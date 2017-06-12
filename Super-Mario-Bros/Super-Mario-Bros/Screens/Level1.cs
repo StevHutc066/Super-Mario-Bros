@@ -28,6 +28,7 @@ namespace Super_Mario_Bros
 
         public static void OnStart()
         {
+            
             mario = new Mario(3, 390, 2, 2, "big");
         }
 

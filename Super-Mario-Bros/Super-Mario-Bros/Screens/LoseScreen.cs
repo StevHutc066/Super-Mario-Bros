@@ -179,6 +179,11 @@ namespace Super_Mario_Bros.Screens
                     if (spaceDown == true)
                     {
                         //Classes.Functions.ChangeScreen(this.FindForm);
+                        MenuScreen ms = new MenuScreen();
+                        Form form = this.FindForm();
+
+                        form.Controls.Add(ms);
+                        form.Controls.Remove(this);
                     }
                     break;
             }

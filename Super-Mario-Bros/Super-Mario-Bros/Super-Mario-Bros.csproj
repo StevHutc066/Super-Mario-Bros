@@ -52,10 +52,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Level1.cs">
+    <Compile Include="Screens\Level1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Level1.Designer.cs">
+    <Compile Include="Screens\Level1.Designer.cs">
       <DependentUpon>Level1.cs</DependentUpon>
     </Compile>
     <Compile Include="Mario.cs" />
@@ -82,7 +82,7 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Level1.resx">
+    <EmbeddedResource Include="Screens\Level1.resx">
       <DependentUpon>Level1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -118,12 +118,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PlusHills.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Super-Mario-Bros-3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Mushroom.png" />
   </ItemGroup>
   <ItemGroup>
@@ -157,12 +151,6 @@
     <None Include="Resources\HillyBackground.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\MarioBros3Background.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\overworld_bg.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\FirstLevelBackground.png" />
   </ItemGroup>
   <ItemGroup>
@@ -170,9 +158,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Mario.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\HIghScore.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Triangle.png" />

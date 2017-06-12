@@ -24,14 +24,12 @@ namespace Super_Mario_Bros.Screens
         {
             lastSelected = selected;
 
+
             if (leftArrowDown || rightArrowDown)
-            {
                 lastArrowDown = true;
-            }
             else
-            {
                 lastArrowDown = false;
-            }
+
 
             switch (e.KeyCode)
             {
@@ -47,6 +45,7 @@ namespace Super_Mario_Bros.Screens
                 default:
                     break;
             }
+
             if (lastArrowDown == false)
             {
                 if (rightArrowDown == true)
@@ -81,13 +80,13 @@ namespace Super_Mario_Bros.Screens
                         if (spaceDown == true)
                         {
                             // Goes to the game screen
-                            Form form = this.FindForm();
                             Level1 l1 = new Level1();
+                            Form form = this.FindForm();
 
                             l1.Location = new Point((this.Width - l1.Width) / 2, (this.Height - l1.Height) / 2);
 
                             form.Controls.Add(l1);
-                            form.Controls.Remove(this);
+                            form.Controls.Remove(this); 
                         }
 
                         break;

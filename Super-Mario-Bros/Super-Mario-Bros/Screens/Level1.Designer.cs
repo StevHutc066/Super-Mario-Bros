@@ -34,8 +34,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackgroundImage = global::Super_Mario_Bros.Properties.Resources.FirstLevelBackground;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Name = "Level1";
-            this.Size = new System.Drawing.Size(961, 563);
+            this.Size = new System.Drawing.Size(1000, 600);
             this.ResumeLayout(false);
 
         }
