@@ -14,8 +14,37 @@ namespace Super_Mario_Bros
     {
         #region Declarations
         Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, spaceDown, escapeDown;
+        static int lives;
         public static Mario mario;
         #endregion
+
+
+        private void Level1_KeyUp(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Left:
+                    leftArrowDown = false;
+                    break;
+                case Keys.Down:
+                    downArrowDown = false;
+                    break;
+                case Keys.Right:
+                    rightArrowDown = false;
+                    break;
+                case Keys.Up:
+                    upArrowDown = false;
+                    break;
+                case Keys.Space:
+                    spaceDown = false;
+                    break;
+                case Keys.Escape:
+                    escapeDown = false;
+                    break;
+                default:
+                    break;
+            }
+        }
 
         public Level1()
         {
@@ -23,22 +52,31 @@ namespace Super_Mario_Bros
             OnStart();
         }
 
-        public static void OnStart()
+
+        public void OnStart()
         {     
-            mario = new Mario(3, 390, 2, 2, "big");
+            mario = new Mario(3, 415, 2, 2, "big");
 
             // start the game engine loop
+            gameTimer.Enabled = true;
             
+            //set life counter
+            lives = 3;
+
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            if (rightArrowDown)
-                mario.x++;
-        }
-
-        private void gameTimer_Tick_1(object sender, EventArgs e)
-        {
+            if (rightArrowDown && mario.x <= this.Width)
+            {
+                mario.Move("right");
+            }
+            else if (leftArrowDown && mario.x >= 0)
+            {
+                mario.Move("left");
+            }
+            //if (rightArrowDown)
+                //mario.x++;
             Refresh();
         }
 
