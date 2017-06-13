@@ -28,7 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
+            // 
+            // gameTimer
+            // 
+            this.gameTimer.Enabled = true;
+            this.gameTimer.Interval = 16;
+            this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick_1);
             // 
             // Level1
             // 
@@ -37,6 +45,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::Super_Mario_Bros.Properties.Resources.FirstLevelBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DoubleBuffered = true;
             this.Name = "Level1";
             this.Size = new System.Drawing.Size(1000, 600);
             this.ResumeLayout(false);
@@ -44,5 +53,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer gameTimer;
     }
 }
