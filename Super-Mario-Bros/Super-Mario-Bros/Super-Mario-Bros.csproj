@@ -178,9 +178,6 @@
     <None Include="Resources\Triangle.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\HighScoreScreen.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\TriangleRight.png" />
   </ItemGroup>
   <ItemGroup>
@@ -206,6 +203,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\HighScoreScreen.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HighScoreScreen.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
