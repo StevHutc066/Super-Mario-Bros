@@ -12,24 +12,23 @@ namespace Super_Mario_Bros
 {
     public partial class Level1 : UserControl
     {
-
+        #region Declarations
         Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, spaceDown, escapeDown;
         public static Mario mario;
+        #endregion
 
         public Level1()
         {
             InitializeComponent();
-        }
-
-        private void Level1_Load(object sender, EventArgs e)
-        {
             OnStart();
         }
 
         public static void OnStart()
-        {
-            
+        {     
             mario = new Mario(3, 390, 2, 2, "big");
+
+            // start the game engine loop
+            
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
@@ -38,9 +37,14 @@ namespace Super_Mario_Bros
                 mario.x++;
         }
 
+        private void gameTimer_Tick_1(object sender, EventArgs e)
+        {
+            Refresh();
+        }
+
         private void Level1_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.DrawImage(Properties.Resources.Mario, mario.x, mario.y, mario.width, mario.height);
+            e.Graphics.DrawImage(Mario.image, mario.x, mario.y, mario.width, mario.height);
         }
 
         private void Level1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
