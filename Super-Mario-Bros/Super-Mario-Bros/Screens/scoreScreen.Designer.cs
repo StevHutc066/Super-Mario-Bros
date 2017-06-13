@@ -28,7 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.output = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // output
+            // 
+            this.output.BackColor = System.Drawing.Color.Transparent;
+            this.output.ForeColor = System.Drawing.Color.White;
+            this.output.Location = new System.Drawing.Point(265, 120);
+            this.output.Name = "output";
+            this.output.Size = new System.Drawing.Size(582, 406);
+            this.output.TabIndex = 0;
+            this.output.Text = "output";
             // 
             // ScoreScreen
             // 
@@ -37,12 +48,17 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::Super_Mario_Bros.Properties.Resources.HighScoreScreen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.output);
             this.Name = "ScoreScreen";
             this.Size = new System.Drawing.Size(1000, 600);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ScoreScreen_KeyUp);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.ScoreScreen_PreviewKeyDown);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label output;
     }
 }

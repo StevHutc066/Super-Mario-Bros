@@ -76,7 +76,7 @@ namespace Super_Mario_Bros.Screens
                 {
                     case 0:
                         playButton.ForeColor = Color.Red;
-                        pointerImage.Location = new Point(173, 403);
+                        pointer.Location = new Point(152, 403);
 
                         if (spaceDown == true)
                         {
@@ -94,7 +94,7 @@ namespace Super_Mario_Bros.Screens
 
                     case 1:
                         scoresButton.ForeColor = Color.Red;
-                        pointerImage.Location = new Point(384, 301);
+                        pointer.Location = new Point(362, 301);
 
                         if (spaceDown == true)
                         {
@@ -112,7 +112,7 @@ namespace Super_Mario_Bros.Screens
 
                     case 2:
                         exitButton.ForeColor = Color.Red;
-                        pointerImage.Location = new Point(639, 403);
+                        pointer.Location = new Point(615, 403);
 
                         if (spaceDown == true)
                         {
