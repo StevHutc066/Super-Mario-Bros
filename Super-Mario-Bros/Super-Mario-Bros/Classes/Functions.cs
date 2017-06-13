@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Super_Mario_Bros.Classes
+namespace Super_Mario_Bros
 {
     class Functions
     {
