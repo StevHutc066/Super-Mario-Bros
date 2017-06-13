@@ -34,6 +34,8 @@
             this.nameText2 = new System.Windows.Forms.Label();
             this.nameText1 = new System.Windows.Forms.Label();
             this.menuButton = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gameOverLabel
@@ -110,11 +112,22 @@
             this.menuButton.TabIndex = 9;
             this.menuButton.Text = "Menu";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Super_Mario_Bros.Properties.Resources.TriangleUp;
+            this.pictureBox1.Location = new System.Drawing.Point(56, 235);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(52, 49);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
             // LoseScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuButton);
             this.Controls.Add(this.nameText3);
             this.Controls.Add(this.nameText2);
@@ -125,6 +138,7 @@
             this.Size = new System.Drawing.Size(1000, 600);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.LoseScreen_KeyUp);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.LoseScreen_PreviewKeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,5 +152,6 @@
         private System.Windows.Forms.Label nameText2;
         private System.Windows.Forms.Label nameText1;
         private System.Windows.Forms.Label menuButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

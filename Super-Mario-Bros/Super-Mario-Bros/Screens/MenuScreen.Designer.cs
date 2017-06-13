@@ -31,8 +31,8 @@
             this.playButton = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Label();
             this.scoresButton = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pointerImage = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pointerImage)).BeginInit();
             this.SuspendLayout();
             // 
             // playButton
@@ -71,16 +71,16 @@
             this.scoresButton.TabIndex = 2;
             this.scoresButton.Text = "Scores";
             // 
-            // pictureBox1
+            // pointerImage
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Super_Mario_Bros.Properties.Resources.Triangle;
-            this.pictureBox1.Location = new System.Drawing.Point(71, 361);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(141, 101);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.pointerImage.BackColor = System.Drawing.Color.Transparent;
+            this.pointerImage.Image = global::Super_Mario_Bros.Properties.Resources.TriangleRight;
+            this.pointerImage.Location = new System.Drawing.Point(173, 403);
+            this.pointerImage.Name = "pointerImage";
+            this.pointerImage.Size = new System.Drawing.Size(40, 38);
+            this.pointerImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pointerImage.TabIndex = 11;
+            this.pointerImage.TabStop = false;
             // 
             // MenuScreen
             // 
@@ -89,7 +89,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::Super_Mario_Bros.Properties.Resources.SuperMarioBros;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pointerImage);
             this.Controls.Add(this.scoresButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.playButton);
@@ -98,7 +98,7 @@
             this.Size = new System.Drawing.Size(1000, 600);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MenuScreen_KeyUp);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.MenuScreen_PreviewKeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pointerImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,6 +109,6 @@
         private System.Windows.Forms.Label playButton;
         private System.Windows.Forms.Label exitButton;
         private System.Windows.Forms.Label scoresButton;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pointerImage;
     }
 }
