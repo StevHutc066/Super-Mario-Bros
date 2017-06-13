@@ -202,12 +202,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\HighScoreScreen.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\HighScoreScreen.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\TheHighscoreScreen.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
