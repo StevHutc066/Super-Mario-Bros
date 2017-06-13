@@ -87,7 +87,7 @@ namespace Super_Mario_Bros.Screens
                             l1.Location = new Point((form.Width - l1.Width) / 2, (form.Height - l1.Height) / 2);
 
                             form.Controls.Add(l1);
-                            form.Controls.Remove(this); 
+                            form.Controls.Remove(this);
                         }
 
                         break;
@@ -99,8 +99,8 @@ namespace Super_Mario_Bros.Screens
                         if (spaceDown == true)
                         {
                             // Goes to the score screen
-                            Form form = this.FindForm();
                             ScoreScreen ss = new ScoreScreen();
+                            Form form = this.FindForm();
 
                             ss.Location = new Point((form.Width - ss.Width) / 2, (form.Height - ss.Height) / 2);
 
@@ -115,9 +115,8 @@ namespace Super_Mario_Bros.Screens
                         pointer.Location = new Point(615, 403);
 
                         if (spaceDown == true)
-                        {
                             Application.Exit();
-                        }
+
 
                         break;
                 }
