@@ -34,12 +34,14 @@
             // output
             // 
             this.output.BackColor = System.Drawing.Color.Transparent;
+            this.output.Font = new System.Drawing.Font("Segoe Script", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.output.ForeColor = System.Drawing.Color.White;
-            this.output.Location = new System.Drawing.Point(265, 120);
+            this.output.Location = new System.Drawing.Point(265, 113);
             this.output.Name = "output";
-            this.output.Size = new System.Drawing.Size(582, 406);
+            this.output.Size = new System.Drawing.Size(582, 418);
             this.output.TabIndex = 0;
-            this.output.Text = "output";
+            this.output.Text = "AAA, 12345\r\nBBB, 12344\r\nCCC,12343\r\nDDD,12342\r\nEEE, 12341\r\nFFF, 12340\r\nGGG, 12339\r" +
+    "\nHHH, 12338\r\nIII, 12337\r\nJJJ, 12336";
             // 
             // ScoreScreen
             // 
