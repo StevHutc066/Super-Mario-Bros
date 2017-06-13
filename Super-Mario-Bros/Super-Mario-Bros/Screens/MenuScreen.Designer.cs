@@ -31,6 +31,8 @@
             this.playButton = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Label();
             this.scoresButton = new System.Windows.Forms.Label();
+            this.pointer = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pointer)).BeginInit();
             this.SuspendLayout();
             // 
             // playButton
@@ -69,6 +71,17 @@
             this.scoresButton.TabIndex = 2;
             this.scoresButton.Text = "Scores";
             // 
+            // pointer
+            // 
+            this.pointer.BackColor = System.Drawing.Color.Transparent;
+            this.pointer.Image = global::Super_Mario_Bros.Properties.Resources.TriangleRight;
+            this.pointer.Location = new System.Drawing.Point(152, 403);
+            this.pointer.Name = "pointer";
+            this.pointer.Size = new System.Drawing.Size(59, 39);
+            this.pointer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pointer.TabIndex = 11;
+            this.pointer.TabStop = false;
+            // 
             // MenuScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -76,6 +89,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::Super_Mario_Bros.Properties.Resources.SuperMarioBros;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.pointer);
             this.Controls.Add(this.scoresButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.playButton);
@@ -84,6 +98,7 @@
             this.Size = new System.Drawing.Size(1000, 600);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MenuScreen_KeyUp);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.MenuScreen_PreviewKeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.pointer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,5 +109,6 @@
         private System.Windows.Forms.Label playButton;
         private System.Windows.Forms.Label exitButton;
         private System.Windows.Forms.Label scoresButton;
+        private System.Windows.Forms.PictureBox pointer;
     }
 }

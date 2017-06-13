@@ -103,6 +103,8 @@ namespace Super_Mario_Bros.Screens
             {
                 case 0:
                     nameText1.ForeColor = Color.Red;
+                    pointer1.Location = new Point(56, 222);
+                    pointer2.Location = new Point(56, 379);
 
                     if (upArrowDown == true)
                     {
@@ -127,6 +129,8 @@ namespace Super_Mario_Bros.Screens
 
                 case 1:
                     nameText2.ForeColor = Color.Red;
+                    pointer1.Location = new Point(157, 222);
+                    pointer2.Location = new Point(157, 379);
 
                     if (upArrowDown == true)
                     {
@@ -151,6 +155,8 @@ namespace Super_Mario_Bros.Screens
 
                 case 2:
                     nameText3.ForeColor = Color.Red;
+                    pointer1.Location = new Point(258, 222);
+                    pointer2.Location = new Point(258, 379);                  
 
                     if (upArrowDown == true)
                     {
@@ -175,12 +181,15 @@ namespace Super_Mario_Bros.Screens
 
                 case 3:
                     menuButton.ForeColor = Color.Red;
+                    pointer.Visible = true;
+                    pointer1.Visible = pointer2.Visible = false;
 
                     if (spaceDown == true)
                     {
-                        //Classes.Functions.ChangeScreen(this.FindForm);
                         MenuScreen ms = new MenuScreen();
                         Form form = this.FindForm();
+
+                        ms.Location = new Point((form.Width - ms.Width) / 2, (form.Height - ms.Height) / 2);
 
                         form.Controls.Add(ms);
                         form.Controls.Remove(this);
@@ -206,6 +215,8 @@ namespace Super_Mario_Bros.Screens
 
                     case 3:
                         menuButton.ForeColor = Color.Blue;
+                        pointer.Visible = false;
+                        pointer1.Visible = pointer2.Visible = true;
                         break;
                 }
             }

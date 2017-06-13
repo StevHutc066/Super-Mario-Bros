@@ -19,7 +19,7 @@ namespace Super_Mario_Bros
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Screens.MenuScreen ms = new Screens.MenuScreen();
+            Screens.LoseScreen ms = new Screens.LoseScreen();
             this.Controls.Add(ms);
             ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);     
         }
