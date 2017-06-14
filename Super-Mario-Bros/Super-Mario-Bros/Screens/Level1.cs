@@ -90,8 +90,8 @@ namespace Super_Mario_Bros
             }
             if (mario.y + mario.height >= this.Height - 100)
                 jump = false;
-            else
-                mario.Fall();
+            //else
+                //mario.Fall();
 
 
             Refresh();
