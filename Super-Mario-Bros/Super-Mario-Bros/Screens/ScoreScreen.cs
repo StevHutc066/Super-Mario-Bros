@@ -17,6 +17,8 @@ namespace Super_Mario_Bros.Screens
         public ScoreScreen()
         {
             InitializeComponent();
+
+
         }
 
         private void ScoreScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
