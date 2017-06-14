@@ -22,6 +22,7 @@ namespace Super_Mario_Bros.Screens
 
         private void MenuScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
+            // Get the last selected
             lastSelected = selected;
 
 
