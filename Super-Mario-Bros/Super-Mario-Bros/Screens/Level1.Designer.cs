@@ -35,8 +35,8 @@
             // gameTimer
             // 
             this.gameTimer.Enabled = true;
-            this.gameTimer.Interval = 16;
-            this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick_1);
+            this.gameTimer.Interval = 10;
+            this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
             // Level1
             // 
@@ -48,6 +48,9 @@
             this.DoubleBuffered = true;
             this.Name = "Level1";
             this.Size = new System.Drawing.Size(1000, 600);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Level1_Paint);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Level1_KeyUp);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Level1_PreviewKeyDown);
             this.ResumeLayout(false);
 
         }

@@ -193,9 +193,9 @@ namespace Super_Mario_Bros.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap overworld_bg {
+        internal static System.Drawing.Bitmap SuperMarioBros {
             get {
-                object obj = ResourceManager.GetObject("overworld_bg", resourceCulture);
+                object obj = ResourceManager.GetObject("SuperMarioBros", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace Super_Mario_Bros.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SuperMarioBros {
+        internal static System.Drawing.Bitmap TheHighscoreScreen {
             get {
-                object obj = ResourceManager.GetObject("SuperMarioBros", resourceCulture);
+                object obj = ResourceManager.GetObject("TheHighscoreScreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

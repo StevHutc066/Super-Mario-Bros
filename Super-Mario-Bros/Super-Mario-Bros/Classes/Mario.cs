@@ -20,8 +20,8 @@ namespace Super_Mario_Bros
             xSpeed = _xSpeed;
             ySpeed = _ySpeed;
             state = _state;
-            width = 8;
-            height = 117;
+            width = 67;
+            height = 93;
 
             if (_state == "big")
             {
@@ -32,8 +32,10 @@ namespace Super_Mario_Bros
 
         public void Move(string dir)
         {
-            x = x + xSpeed;
-            y = y + ySpeed;
-        }
+            if (dir == "left")
+                x -= xSpeed;
+            if (dir == "right")
+                x += xSpeed;
+        }s
     }
 }
