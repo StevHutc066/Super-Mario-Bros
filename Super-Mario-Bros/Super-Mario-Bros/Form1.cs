@@ -19,7 +19,8 @@ namespace Super_Mario_Bros
         }
 
         public static List<Classes.Highscores> highscoreList = new List<Classes.Highscores>();
-        public static int currentScore;
+        public static int currentScore = 0;
+        public static string currentName;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -27,7 +28,8 @@ namespace Super_Mario_Bros
 
             this.Controls.Add(ms);
 
-            ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);     
+            ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
+            //loadHighscores();
         }
 
         private void loadHighscores() //method for loading any saved highscores in the highscoreDB xml file

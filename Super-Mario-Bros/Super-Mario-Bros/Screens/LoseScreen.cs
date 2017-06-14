@@ -186,6 +186,10 @@ namespace Super_Mario_Bros.Screens
 
                     if (spaceDown == true)
                     {
+                        Classes.Highscores hs = new Classes.Highscores(nameText1.Text + nameText2.Text + nameText3.Text, Convert.ToString(Form1.currentScore));
+                        hs.save(hs);
+                        hs.saveScores(Form1.highscoreList);
+
                         MenuScreen ms = new MenuScreen();
                         Form form = this.FindForm();
 

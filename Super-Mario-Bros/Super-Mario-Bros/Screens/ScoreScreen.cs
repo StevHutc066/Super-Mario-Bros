@@ -17,8 +17,6 @@ namespace Super_Mario_Bros.Screens
         public ScoreScreen()
         {
             InitializeComponent();
-
-
         }
 
         private void ScoreScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -41,6 +39,22 @@ namespace Super_Mario_Bros.Screens
 
                 form.Controls.Add(ms);
                 form.Controls.Remove(this);
+            }
+        }
+
+        private void OnLoad()
+        {
+            //outputs highscores in format: (Position). NAME score 
+            for (int i = 0; i < Form1.highscoreList.Count; i++)
+            {
+                if ((i + 1) >= 10)
+                {
+                    output.Text += (i + 1) + ".  " + Form1.highscoreList[i].name + Form1.highscoreList[i].score + "\n";
+                }
+                else
+                {
+                    output.Text += (i + 1) + ".   " + Form1.highscoreList[i].name + Form1.highscoreList[i].score + "\n";
+                }
             }
         }
 
