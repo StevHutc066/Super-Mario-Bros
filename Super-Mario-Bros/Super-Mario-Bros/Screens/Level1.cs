@@ -120,7 +120,14 @@ namespace Super_Mario_Bros
                     break;
                 case Keys.Space:
                     spaceDown = true;
-                    Application.Exit();
+
+                    Screens.LoseScreen ms = new Screens.LoseScreen();
+                    Form form = this.FindForm();
+
+                    ms.Location = new Point((form.Width - ms.Width) / 2, (form.Height - ms.Height) / 2);
+
+                    form.Controls.Add(ms);
+                    form.Controls.Remove(this);
                     break;
                 case Keys.Escape:
                     escapeDown = true;
