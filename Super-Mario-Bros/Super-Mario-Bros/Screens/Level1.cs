@@ -54,12 +54,12 @@ namespace Super_Mario_Bros
 
 
         public void OnStart()
-        {     
+        {
             mario = new Mario(3, 415, 2, 2, "big");
 
             // start the game engine loop
             gameTimer.Enabled = true;
-            
+
             //set life counter
             lives = 3;
 
@@ -68,6 +68,8 @@ namespace Super_Mario_Bros
 
             //force
             force = 0;
+
+            jump = false;
 
         }
 
@@ -86,13 +88,12 @@ namespace Super_Mario_Bros
                 mario.y -= force;
                 force--;
             }
-            if (mario.y + mario.height >= this.Height - 91)
+            if (mario.y + mario.height >= this.Height - 100)
                 jump = false;
             else
                 mario.Fall();
 
-                
-            
+
             Refresh();
         }
 
@@ -119,21 +120,19 @@ namespace Super_Mario_Bros
                     break;
                 case Keys.Space:
                     spaceDown = true;
-                    break;
-                case Keys.Escape:
-                    //escapeDown = true;
                     Application.Exit();
                     break;
-                default:
-                    break;
-                    if (!jump)
-                    {
-                        if (e.KeyCode == Keys.Space)
-                        {
-                            jump = true;
-                            force = G;
-                        }
-                    }
+                case Keys.Escape:
+                    escapeDown = true;
+                    break;                    
+            }
+            if (!jump)
+            {
+                if (e.KeyCode == Keys.Up)
+                {
+                    jump = true;
+                    force = G;
+                }
             }
         }
 
