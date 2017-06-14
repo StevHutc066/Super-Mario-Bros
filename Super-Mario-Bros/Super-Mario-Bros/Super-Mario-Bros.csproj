@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Functions.cs" />
+    <Compile Include="Classes\Highscores.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

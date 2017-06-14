@@ -117,7 +117,6 @@ namespace Super_Mario_Bros.Screens
                         if (spaceDown == true)
                             Application.Exit();
 
-
                         break;
                 }
 
