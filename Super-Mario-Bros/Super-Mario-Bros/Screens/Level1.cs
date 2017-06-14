@@ -55,7 +55,7 @@ namespace Super_Mario_Bros
 
         public void OnStart()
         {
-            mario = new Mario(3, 415, 2, 2, "big");
+            mario = new Mario(3, 415, 4, 2, "big");
 
             // start the game engine loop
             gameTimer.Enabled = true;
@@ -64,7 +64,7 @@ namespace Super_Mario_Bros
             lives = 3;
 
             //Gravity
-            G = 30;
+            G = 20;
 
             //force
             force = 0;
