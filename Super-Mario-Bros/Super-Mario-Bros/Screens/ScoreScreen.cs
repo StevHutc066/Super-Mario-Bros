@@ -35,6 +35,17 @@ namespace Super_Mario_Bros.Screens
                 default:
                     break;
             }
+
+            if (spaceDown == true)
+            {
+                MenuScreen ms = new MenuScreen();
+                Form form = this.FindForm();
+
+                ms.Location = new Point((form.Width - ms.Width) / 2, (form.Height - ms.Height) / 2);
+
+                form.Controls.Add(ms);
+                form.Controls.Remove(this);
+            }
         }
 
         private void ScoreScreen_KeyUp(object sender, KeyEventArgs e)
