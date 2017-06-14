@@ -36,6 +36,11 @@ namespace Super_Mario_Bros
                 x -= xSpeed;
             if (dir == "right")
                 x += xSpeed;
-        }s
+        }
+
+        public void Fall()
+        {
+            y += ySpeed;
+        }
     }
 }

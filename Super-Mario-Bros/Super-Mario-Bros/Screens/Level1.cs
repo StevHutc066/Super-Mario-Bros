@@ -13,8 +13,8 @@ namespace Super_Mario_Bros
     public partial class Level1 : UserControl
     {
         #region Declarations
-        Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, spaceDown, escapeDown;
-        static int lives;
+        Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, spaceDown, escapeDown, jump;
+        static int lives, G, force;
         public static Mario mario;
         #endregion
 
@@ -63,11 +63,17 @@ namespace Super_Mario_Bros
             //set life counter
             lives = 3;
 
+            //Gravity
+            G = 30;
+
+            //force
+            force = 0;
+
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            if (rightArrowDown && mario.x <= this.Width)
+            if (rightArrowDown && (mario.x + mario.width) <= this.Width)
             {
                 mario.Move("right");
             }
@@ -75,8 +81,18 @@ namespace Super_Mario_Bros
             {
                 mario.Move("left");
             }
-            //if (rightArrowDown)
-                //mario.x++;
+            if (jump)
+            {
+                mario.y -= force;
+                force--;
+            }
+            if (mario.y + mario.height >= this.Height - 91)
+                jump = false;
+            else
+                mario.Fall();
+
+                
+            
             Refresh();
         }
 
@@ -105,10 +121,19 @@ namespace Super_Mario_Bros
                     spaceDown = true;
                     break;
                 case Keys.Escape:
-                    escapeDown = true;
+                    //escapeDown = true;
+                    Application.Exit();
                     break;
                 default:
                     break;
+                    if (!jump)
+                    {
+                        if (e.KeyCode == Keys.Space)
+                        {
+                            jump = true;
+                            force = G;
+                        }
+                    }
             }
         }
 
