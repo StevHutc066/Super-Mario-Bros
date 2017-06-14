@@ -12,7 +12,7 @@ namespace Super_Mario_Bros.Screens
 {
     public partial class ScoreScreen : UserControl
     {
-        Boolean lastArrowDown, leftArrowDown, rightArrowDown, spaceDown;
+        Boolean spaceDown;
 
         public ScoreScreen()
         {
@@ -23,17 +23,22 @@ namespace Super_Mario_Bros.Screens
         {
             switch (e.KeyCode)
             {
-                case Keys.Left:
-                    leftArrowDown = true;
-                    break;
-                case Keys.Right:
-                    rightArrowDown = true;
-                    break;
                 case Keys.Space:
                     spaceDown = true;
                     break;
                 default:
                     break;
+            }
+
+            if (spaceDown == true)
+            {
+                MenuScreen ms = new MenuScreen();
+                Form form = this.FindForm();
+
+                ms.Location = new Point((form.Width - ms.Width) / 2, (form.Height - ms.Height) / 2);
+
+                form.Controls.Add(ms);
+                form.Controls.Remove(this);
             }
         }
 
@@ -41,12 +46,6 @@ namespace Super_Mario_Bros.Screens
         {
             switch (e.KeyCode)
             {
-                case Keys.Left:
-                    leftArrowDown = false;
-                    break;
-                case Keys.Right:
-                    rightArrowDown = false;
-                    break;
                 case Keys.Space:
                     spaceDown = false;
                     break;
