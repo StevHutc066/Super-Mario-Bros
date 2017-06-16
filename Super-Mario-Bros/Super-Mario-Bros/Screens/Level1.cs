@@ -49,6 +49,8 @@ namespace Super_Mario_Bros
 
             fallSpeed = 3;
 
+            gameOn = true;
+
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
@@ -61,14 +63,21 @@ namespace Super_Mario_Bros
             {
                 mario.Move("left");
             }
-            //if (jump /*&& !NoInAirCollision*/)
-            //{
-            //    force -= gravity;
-            //    mario.y -= force;
-            //    force--;
-            //}
+            if (jump)
+            {
+                mario.y -= force;
+                force--;
+            }
             if (mario.y + mario.height >= this.Height - 100)
+            {
                 jump = false;
+
+                if (lastDirRight)
+                    mario.image = Sprites.RightStand;
+                else
+                    mario.image = Sprites.LeftStand;
+            }
+                
             //else
             //mario.Fall();
 
@@ -88,6 +97,8 @@ namespace Super_Mario_Bros
                 case Keys.Left:
                     leftArrowDown = true;
                     lastDirRight = false;
+                    if (!jump)
+                        mario.image = Sprites.LeftStand;
                     break;
                 case Keys.Down:
                     downArrowDown = true;
@@ -95,23 +106,8 @@ namespace Super_Mario_Bros
                 case Keys.Right:
                     rightArrowDown = true;
                     lastDirRight = true;
-                    break;
-                case Keys.Up:
-                    upArrowDown = true;
                     if (!jump)
-                    {
-                        if (lastDirRight)       //Checks direction, changes jump image
-                        {
-                            mario.image = Sprites.RightJump;
-                        }
-                        else
-                        {
-                            mario.image = Sprites.LeftJump;
-                        }
-                        //mario.y -= mario.ySpeed;     //Player moves up a bit
-                        jump = true;     //Sets a variable that player is jumping
-                        force = gravity;        //Force to be moved up changes
-                    }
+                        mario.image = Sprites.RightStand;
                     break;
                 case Keys.Space:
                     spaceDown = true;
@@ -144,14 +140,25 @@ namespace Super_Mario_Bros
                     break;
 
             }
-            //if (!jump)
-            //{
-            //    if (e.KeyCode == Keys.Up)
-            //    {
-            //        jump = true;
-            //        force = gravity;
-            //    }
-            //}
+
+            if (e.KeyCode == Keys.Up)
+            {
+                upArrowDown = true;
+                if (!jump)
+                {
+                    if (lastDirRight)       //Checks direction, changes jump image
+                    {
+                        mario.image = Sprites.RightJump;
+                    }
+                    else
+                    {
+                        mario.image = Sprites.LeftJump;
+                    }
+                    //mario.y -= mario.ySpeed;     //Player moves up a bit
+                    jump = true;     //Sets a variable that player is jumping
+                    force = gravity;        //Force to be moved up changes
+                }
+            }
         }
 
         private void Level1_KeyUp(object sender, KeyEventArgs e)
@@ -161,10 +168,10 @@ namespace Super_Mario_Bros
             {
                 switch (e.KeyCode)
                 {
-                    case Keys.Left:                             //On Left Key press UP
-                        mario.image = Sprites.LeftStand;    //Players image changes to stand
-                        lastDirRight = false;                   //Last move was to the left
-                        leftArrowDown = false;                    //Doesnt move left anymore
+                    case Keys.Left:                             
+                        mario.image = Sprites.LeftStand;   
+                        lastDirRight = false;                   
+                        leftArrowDown = false;             
                         break;
                     case Keys.Right:
                         mario.image = Sprites.RightStand;
