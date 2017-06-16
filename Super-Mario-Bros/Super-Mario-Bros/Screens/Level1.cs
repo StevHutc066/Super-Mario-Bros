@@ -22,8 +22,6 @@ namespace Super_Mario_Bros
         #endregion
 
 
-
-
         public Level1()
         {
             InitializeComponent();
@@ -89,16 +87,18 @@ namespace Super_Mario_Bros
             {
                 case Keys.Left:
                     leftArrowDown = true;
+                    lastDirRight = false;
                     break;
                 case Keys.Down:
                     downArrowDown = true;
                     break;
                 case Keys.Right:
                     rightArrowDown = true;
+                    lastDirRight = true;
                     break;
                 case Keys.Up:
                     upArrowDown = true;
-                    if (!jump && !mario.InAirCollision(mario))
+                    if (!jump)
                     {
                         if (lastDirRight)       //Checks direction, changes jump image
                         {
@@ -109,8 +109,8 @@ namespace Super_Mario_Bros
                             mario.image = Sprites.LeftJump;
                         }
                         //mario.y -= mario.ySpeed;     //Player moves up a bit
-                        //force = gravity;        //Force to be moved up changes
                         jump = true;     //Sets a variable that player is jumping
+                        force = gravity;        //Force to be moved up changes
                     }
                     break;
                 case Keys.Space:
@@ -144,14 +144,14 @@ namespace Super_Mario_Bros
                     break;
 
             }
-            if (!jump)
-            {
-                if (e.KeyCode == Keys.Up)
-                {
-                    jump = true;
-                    force = gravity;
-                }
-            }
+            //if (!jump)
+            //{
+            //    if (e.KeyCode == Keys.Up)
+            //    {
+            //        jump = true;
+            //        force = gravity;
+            //    }
+            //}
         }
 
         private void Level1_KeyUp(object sender, KeyEventArgs e)
