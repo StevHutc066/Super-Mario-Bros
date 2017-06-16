@@ -11,7 +11,7 @@ namespace Super_Mario_Bros
     {
         public int x, y, xSpeed, ySpeed, width, height;
         public string state;
-        public static Image image;
+        public Image image;
 
         public Mario(int _x, int _y, int _xSpeed, int _ySpeed, string _state)
         {
@@ -25,7 +25,7 @@ namespace Super_Mario_Bros
 
             if (_state == "big")
             {
-                image = Properties.Resources.Mario;
+                image = Sprites.RightStand;
             }
         }
 
@@ -41,6 +41,17 @@ namespace Super_Mario_Bros
         public void Fall()
         {
             y += ySpeed;
+        }
+
+        public bool InAirCollision(Mario mario)
+        {
+            return false;
+        }
+
+        public Rectangle Bounds()
+        {
+            Rectangle rect = new Rectangle(x, y, width, height); 
+            return rect;
         }
     }
 }

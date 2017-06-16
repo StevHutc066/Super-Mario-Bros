@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Enemy.cs" />
     <Compile Include="Classes\Functions.cs" />
     <Compile Include="Classes\Highscores.cs" />
     <Compile Include="Form1.cs">
@@ -67,6 +68,11 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sprites.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sprites.resx</DependentUpon>
     </Compile>
     <Compile Include="Screens\Level1.cs">
       <SubType>UserControl</SubType>
@@ -95,8 +101,17 @@
     <Compile Include="Screens\ScoreScreen.Designer.cs">
       <DependentUpon>ScoreScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="WorldItems.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorldItems.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sprites.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Sprites.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Level1.resx">
       <DependentUpon>Level1.cs</DependentUpon>
@@ -119,6 +134,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\ScoreScreen.resx">
       <DependentUpon>ScoreScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorldItems.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WorldItems.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -204,6 +223,75 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TheHighscoreScreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioSprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioSpritLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioStandingLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioStandingRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioWalkLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioWalkRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jump_l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jump_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stand_l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stand_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk_l.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk_r.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jump_l1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jump_r1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stand_l1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stand_r1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk_l1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk_r1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clouds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coin1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Platform.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
