@@ -77,11 +77,10 @@ namespace Super_Mario_Bros
                 else
                     mario.image = Sprites.LeftStand;
             }
-                
+
             //else
             //mario.Fall();
-
-
+            //Form1.scoreLabel.Text = "Score: 0";
             Refresh();
         }
 
@@ -154,8 +153,7 @@ namespace Super_Mario_Bros
                     {
                         mario.image = Sprites.LeftJump;
                     }
-                    //mario.y -= mario.ySpeed;     //Player moves up a bit
-                    jump = true;     //Sets a variable that player is jumping
+                    jump = true;     // Mairo is jumping
                     force = gravity;        //Force to be moved up changes
                 }
             }

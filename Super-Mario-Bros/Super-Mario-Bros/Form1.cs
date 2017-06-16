@@ -20,15 +20,30 @@ namespace Super_Mario_Bros
 
         public static List<Classes.Highscores> highscoreList = new List<Classes.Highscores>();
         public static int currentScore = 0;
+        public static Label scoreLabel = new Label();
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Labels(scoreLabel);
+            scoreLabel.Location = new Point(330, 170);
+            scoreLabel.Text = "Score: 0";
+
             Screens.MenuScreen ms = new Screens.MenuScreen();
 
             this.Controls.Add(ms);
 
             ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
             loadHighscores();
+        }
+
+        private void Labels(Label l)
+        {
+            Controls.Add(l);
+            l.Font = new Font("Kozuka Gothic Pro", 20, FontStyle.Bold);
+            l.Size = new Size(400, 40);
+            l.BackColor = Color.Transparent;
+            l.ForeColor = Color.White;
         }
 
         private void loadHighscores() //method for loading any saved highscores in the highscoreDB xml file
