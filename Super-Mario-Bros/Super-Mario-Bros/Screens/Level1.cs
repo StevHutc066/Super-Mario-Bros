@@ -55,6 +55,8 @@ namespace Super_Mario_Bros
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
+            Form1.currentScore++;
+
             if (rightArrowDown && (mario.x + mario.width) <= this.Width)
             {
                 mario.Move("right");
@@ -154,7 +156,6 @@ namespace Super_Mario_Bros
                     {
                         mario.image = Sprites.LeftJump;
                     }
-                    //mario.y -= mario.ySpeed;     //Player moves up a bit
                     jump = true;     //Sets a variable that player is jumping
                     force = gravity;        //Force to be moved up changes
                 }
