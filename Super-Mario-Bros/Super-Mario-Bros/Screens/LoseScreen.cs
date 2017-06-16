@@ -15,8 +15,14 @@ namespace Super_Mario_Bros.Screens
         Boolean lastArrowDown, leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, spaceDown;
         int index1, index2, index3, selected, lastSelected;
 
+        private void LoseScreen_Load(object sender, EventArgs e)
+        {
+            pointsOutput.Text = "Score: " + Form1.currentScore; // Display player score
+        }
+
         private void LoseScreen_KeyUp(object sender, KeyEventArgs e)
         {
+            // Change keys back to false after player stops pressing
             switch (e.KeyCode)
             {
                 case Keys.Left:
@@ -44,13 +50,9 @@ namespace Super_Mario_Bros.Screens
             lastSelected = selected;
 
             if (leftArrowDown || rightArrowDown)
-            {
                 lastArrowDown = true;
-            }
             else
-            {
                 lastArrowDown = false;
-            }
 
             switch (e.KeyCode)
             {
@@ -72,131 +74,95 @@ namespace Super_Mario_Bros.Screens
                 default:
                     break;
             }
+
+            if (spaceDown == true)
+            {
+                Classes.Highscores hs = new Classes.Highscores(nameText1.Text + nameText2.Text + nameText3.Text, Convert.ToString(Form1.currentScore));
+                hs.save(hs);
+                hs.saveScores(Form1.highscoreList);
+
+                MenuScreen ms = new MenuScreen();
+                Form form = this.FindForm();
+
+                ms.Location = new Point((form.Width - ms.Width) / 2, (form.Height - ms.Height) / 2);
+
+                form.Controls.Add(ms);
+                form.Controls.Remove(this);
+            }
+
             if (lastArrowDown == false)
             {
                 if (rightArrowDown == true)
-                {
-                    if (selected == 3)
-                    {
-                        selected = 0;
-                    }
-                    else
-                    {
-                        selected++;
-                    }
-                }
+                    selected++;
 
                 if (leftArrowDown == true)
-                {
-                    if (selected == 0)
-                    {
-                        selected = 3;
-                    }
-                    else
-                    {
-                        selected--;
-                    }
-                }
+                    selected--;
+
+                if (selected == 3)
+                    selected = 0;
+                if (selected == -1)
+                    selected = 2;
             }
 
             switch (selected)
             {
                 case 0:
                     nameText1.ForeColor = Color.Red;
-                    pointer1.Location = new Point(56, 222);
-                    pointer2.Location = new Point(56, 379);
+                    pointer1.Location = new Point(374, 317);
+                    pointer2.Location = new Point(374, 474);
 
                     if (upArrowDown == true)
                     {
                         index1++;
-
                         if (index1 == 26)
-                        {
                             index1 = 0;
-                        }
                     }
 
                     if (downArrowDown == true)
                     {
                         index1--;
-
                         if (index1 == -1)
-                        {
                             index1 = 25;
-                        }
                     }
                     break;
 
                 case 1:
                     nameText2.ForeColor = Color.Red;
-                    pointer1.Location = new Point(157, 222);
-                    pointer2.Location = new Point(157, 379);
+                    pointer1.Location = new Point(475, 317);
+                    pointer2.Location = new Point(475, 474);
 
                     if (upArrowDown == true)
                     {
                         index2++;
-
                         if (index2 == 26)
-                        {
                             index2 = 0;
-                        }
                     }
 
                     if (downArrowDown == true)
                     {
                         index2--;
-
                         if (index2 == -1)
-                        {
                             index2 = 25;
-                        }
                     }
                     break;
 
                 case 2:
                     nameText3.ForeColor = Color.Red;
-                    pointer1.Location = new Point(258, 222);
-                    pointer2.Location = new Point(258, 379);                  
+                    pointer1.Location = new Point(576, 317);
+                    pointer2.Location = new Point(576, 474);
 
                     if (upArrowDown == true)
                     {
                         index3++;
-
                         if (index3 == 26)
-                        {
                             index3 = 0;
-                        }
                     }
 
                     if (downArrowDown == true)
                     {
                         index3--;
-
                         if (index3 == -1)
-                        {
                             index3 = 25;
-                        }
-                    }
-                    break;
-
-                case 3:
-                    menuButton.ForeColor = Color.Red;
-                    pointer.Visible = true;
-                    pointer1.Visible = pointer2.Visible = false;
-
-                    if (spaceDown == true)
-                    {
-                        Classes.Highscores hs = new Classes.Highscores(nameText1.Text + nameText2.Text + nameText3.Text, Convert.ToString(Form1.currentScore));
-                        hs.save(hs);
-                        hs.saveScores(Form1.highscoreList);
-
-                        MenuScreen ms = new MenuScreen();
-                        Form form = this.FindForm();
-
-                        ms.Location = new Point((form.Width - ms.Width) / 2, (form.Height - ms.Height) / 2);
-
-                        form.Controls.Add(ms);
-                        form.Controls.Remove(this);
                     }
                     break;
             }
@@ -215,12 +181,6 @@ namespace Super_Mario_Bros.Screens
 
                     case 2:
                         nameText3.ForeColor = Color.Blue;
-                        break;
-
-                    case 3:
-                        menuButton.ForeColor = Color.Blue;
-                        pointer.Visible = false;
-                        pointer1.Visible = pointer2.Visible = true;
                         break;
                 }
             }
