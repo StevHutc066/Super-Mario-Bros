@@ -19,34 +19,38 @@ namespace Super_Mario_Bros
         }
 
         public static List<Classes.Highscores> highscoreList = new List<Classes.Highscores>();
-        public static int currentScore = 0;
+        public static uint currentScore = 0;
         public static Label scoreLabel = new Label();
+        public static Label timeLabel = new Label();
         
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Labels(scoreLabel);
-            scoreLabel.Location = new Point(330, 170);
-            scoreLabel.Text = "Score: 0";
+            CreateLabel(scoreLabel, new Point(520, 170));
+            
+            CreateLabel(timeLabel, new Point(330, 170));
 
+            #region Screen Change to MenuScreen
             Screens.MenuScreen ms = new Screens.MenuScreen();
-
             this.Controls.Add(ms);
-
             ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
-            loadHighscores();
+            #endregion
+
+            LoadHighscores();
         }
 
-        private void Labels(Label l)
+        private void CreateLabel(Label l, Point p)
         {
             Controls.Add(l);
             l.Font = new Font("Kozuka Gothic Pro", 20, FontStyle.Bold);
-            l.Size = new Size(400, 40);
+            //l.Size = new Size(100, 40);
+            l.AutoSize = true;
             l.BackColor = Color.Transparent;
             l.ForeColor = Color.White;
+            l.Location = p;
         }
 
-        private void loadHighscores() //method for loading any saved highscores in the highscoreDB xml file
+        private void LoadHighscores() // Method for loading any saved highscores in the highscoreDB xml file
         {
             XmlDocument doc = new XmlDocument();
             doc.Load("highscoreDB.xml");
@@ -67,6 +71,7 @@ namespace Super_Mario_Bros
                         hs.score = grandChild.InnerText;
                     }
                 }
+
                 highscoreList.Add(hs);
             }
         }

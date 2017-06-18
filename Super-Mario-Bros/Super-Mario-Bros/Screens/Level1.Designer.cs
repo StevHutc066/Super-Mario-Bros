@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.pauseLabel = new System.Windows.Forms.Label();
+            this.timeTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // gameTimer
@@ -50,6 +51,12 @@
             this.pauseLabel.TabIndex = 1;
             this.pauseLabel.Text = "Paused";
             this.pauseLabel.Visible = false;
+            // 
+            // timeTimer
+            // 
+            this.timeTimer.Enabled = true;
+            this.timeTimer.Interval = 1;
+            this.timeTimer.Tick += new System.EventHandler(this.timeTimer_Tick);
             // 
             // Level1
             // 
@@ -74,5 +81,6 @@
 
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.Label pauseLabel;
+        private System.Windows.Forms.Timer timeTimer;
     }
 }
