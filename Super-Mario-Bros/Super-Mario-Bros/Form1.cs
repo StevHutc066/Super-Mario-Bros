@@ -27,15 +27,16 @@ namespace Super_Mario_Bros
         private void Form1_Load(object sender, EventArgs e)
         {
             CreateLabel(scoreLabel, new Point(520, 170));
-            //scoreLabel.Text = "Score: 0";
+            
             CreateLabel(timeLabel, new Point(330, 170));
+
             #region Screen Change to MenuScreen
             Screens.MenuScreen ms = new Screens.MenuScreen();
             this.Controls.Add(ms);
             ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
             #endregion
 
-            loadHighscores();
+            LoadHighscores();
         }
 
         private void CreateLabel(Label l, Point p)
@@ -49,7 +50,7 @@ namespace Super_Mario_Bros
             l.Location = p;
         }
 
-        private void loadHighscores() // Method for loading any saved highscores in the highscoreDB xml file
+        private void LoadHighscores() // Method for loading any saved highscores in the highscoreDB xml file
         {
             XmlDocument doc = new XmlDocument();
             doc.Load("highscoreDB.xml");

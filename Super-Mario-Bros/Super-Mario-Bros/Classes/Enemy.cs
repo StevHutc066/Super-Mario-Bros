@@ -9,8 +9,8 @@ namespace Super_Mario_Bros
 {
     public class Enemy
     {
-        int x, y, width, height, xSpeed, ySpeed;
-        Image image;
+        public int x, y, width, height, xSpeed, ySpeed;
+        public Image image;
         public Enemy(int _x, int _y, int _width, int _height, int _xSpeed, int _ySpeed, Image _image)
         {
             x = _x;

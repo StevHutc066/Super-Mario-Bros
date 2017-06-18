@@ -63,6 +63,16 @@ namespace Super_Mario_Bros {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Goomba {
+            get {
+                object obj = ResourceManager.GetObject("Goomba", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LeftJump {
             get {
                 object obj = ResourceManager.GetObject("LeftJump", resourceCulture);

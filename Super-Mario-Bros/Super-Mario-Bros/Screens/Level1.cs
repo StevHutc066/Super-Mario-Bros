@@ -12,7 +12,7 @@ namespace Super_Mario_Bros
 {
     public partial class Level1 : UserControl
     {
-        #region Declarations
+        #region Variables
         Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, spaceDown, escapeDown, jump, gameOn, lastDirRight;
         static int lives, gravity, force, fallSpeed;
         public long gameTime;
@@ -35,6 +35,12 @@ namespace Super_Mario_Bros
         {
             // Creates a new Mario character at start
             mario = new Mario(3, 415, 3, 3, "big");
+
+            // Creates a gumba
+            Enemy goomba = new Enemy(100, 415, 67, 80, 3, 3, Sprites.Goomba);
+
+            // Adds enemies into list
+            enemies.Add(goomba);
 
             // Creates new animation
             walkRightAnimation = new Animation(new Bitmap[] { Sprites.RightStand, Sprites.RightWalk });
@@ -74,7 +80,15 @@ namespace Super_Mario_Bros
 
         private void Level1_Paint(object sender, PaintEventArgs e)
         {
+            // Draws Mario
             e.Graphics.DrawImage(mario.image, mario.x, mario.y, mario.width, mario.height);
+
+            // Draws enemies
+            //foreach (Enemy en in enemies)
+            //{
+                e.Graphics.DrawImage(enemies[0].image, enemies[0].x, enemies[0].y, enemies[0].width, enemies[0].height);
+            //}
+            
         }
 
 
@@ -253,6 +267,7 @@ namespace Super_Mario_Bros
         //        }
         //    return false;
         //}
+        #endregion
     }
-    #endregion
+
 }
