@@ -15,8 +15,11 @@ namespace Super_Mario_Bros
         #region Declarations
         Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, spaceDown, escapeDown, jump, gameOn, lastDirRight;
         static int lives, gravity, force, fallSpeed;
+        public long gameTime;
         public static Mario mario;
         public static Enemy enemy;
+        Graphics g;
+        Animation walkRightAnimation, walkLeftAnimation;
         List<Enemy> enemies = new List<Enemy>();
         List<Image> images = new List<Image>();
         #endregion
@@ -28,33 +31,60 @@ namespace Super_Mario_Bros
             OnStart();
         }
 
-
         public void OnStart()
         {
+            // Creates a new Mario character at start
             mario = new Mario(3, 415, 3, 3, "big");
 
-            // start the game engine loop
+            // Creates new animation
+            walkRightAnimation = new Animation(new Bitmap[] { Sprites.RightStand, Sprites.RightWalk });
+
+            // Starts the game logic
             gameTimer.Enabled = true;
 
-            //set life counter
+            // Resets lives
             lives = 3;
 
-            //Gravity
+            // Gravity of player
             gravity = 20;
 
-            //force
+            // Sets the force
             force = 0;
 
+            // Playing isn't jumping at the start
             jump = false;
 
+            // Sets the speed of falling
             fallSpeed = 3;
 
+            // The game is running
             gameOn = true;
+
+            // Resets game time
+            gameTime = 0;
+
+            // Sets visibility for Form1 labels
+            Form1.scoreLabel.Visible = true;
+            Form1.timeLabel.Visible = true;
+
+            // Graphics object
+            g = this.CreateGraphics();
 
         }
 
+        private void Level1_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.DrawImage(mario.image, mario.x, mario.y, mario.width, mario.height);
+        }
+
+
+        #region Timer Ticks
         private void gameTimer_Tick(object sender, EventArgs e)
         {
+            Form1.currentScore++;
+            Form1.scoreLabel.Text = "Score: " + Convert.ToString(Form1.currentScore);
+
+            #region Moving
             if (rightArrowDown && (mario.x + mario.width) <= this.Width)
             {
                 mario.Move("right");
@@ -77,18 +107,22 @@ namespace Super_Mario_Bros
                 else
                     mario.image = Sprites.LeftStand;
             }
-
             //else
             //mario.Fall();
-            //Form1.scoreLabel.Text = "Score: 0";
+            #endregion
+
             Refresh();
         }
 
-        private void Level1_Paint(object sender, PaintEventArgs e)
+        private void timeTimer_Tick(object sender, EventArgs e)
         {
-            e.Graphics.DrawImage(mario.image, mario.x, mario.y, mario.width, mario.height);
+            gameTime++;
+            Form1.timeLabel.Text = "Time: " + Convert.ToString(gameTime);
         }
+        #endregion
 
+
+        #region Key Presses
         private void Level1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             switch (e.KeyCode)
@@ -111,7 +145,7 @@ namespace Super_Mario_Bros
                 case Keys.Space:
                     spaceDown = true;
                     gameTimer.Enabled = false;
-
+                    timeTimer.Enabled = false;
                     Screens.LoseScreen ms = new Screens.LoseScreen();
                     Form form = this.FindForm();
 
@@ -220,4 +254,5 @@ namespace Super_Mario_Bros
         //    return false;
         //}
     }
+    #endregion
 }
