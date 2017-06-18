@@ -55,6 +55,8 @@ namespace Super_Mario_Bros
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
+            Form1.currentScore++;
+
             if (rightArrowDown && (mario.x + mario.width) <= this.Width)
             {
                 mario.Move("right");
