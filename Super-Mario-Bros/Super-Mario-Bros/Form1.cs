@@ -26,9 +26,9 @@ namespace Super_Mario_Bros
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            CreateLabel(scoreLabel, new Point(520, 170));
+            CreateLabel(scoreLabel, new Point(520, this.Height - scoreLabel.Height * 3));
             
-            CreateLabel(timeLabel, new Point(330, 170));
+            CreateLabel(timeLabel, new Point(330, this.Height - timeLabel.Height * 3));
 
             #region Screen Change to MenuScreen
             Screens.MenuScreen ms = new Screens.MenuScreen();
@@ -43,7 +43,6 @@ namespace Super_Mario_Bros
         {
             Controls.Add(l);
             l.Font = new Font("Kozuka Gothic Pro", 20, FontStyle.Bold);
-            //l.Size = new Size(100, 40);
             l.AutoSize = true;
             l.BackColor = Color.Transparent;
             l.ForeColor = Color.White;
