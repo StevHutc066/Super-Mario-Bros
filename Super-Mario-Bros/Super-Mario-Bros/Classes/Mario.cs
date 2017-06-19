@@ -53,5 +53,13 @@ namespace Super_Mario_Bros
             Rectangle rect = new Rectangle(x, y, width, height); 
             return rect;
         }
+
+        public bool HeroCollision(Enemy e)
+        {
+            Rectangle heroRec = new Rectangle(x, y, width, height);
+            Rectangle enemyRec = new Rectangle(e.x, e.y, e.width, e.height);
+
+            return heroRec.IntersectsWith(enemyRec);
+        }
     }
 }

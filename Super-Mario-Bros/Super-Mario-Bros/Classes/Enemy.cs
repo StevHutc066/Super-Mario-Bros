@@ -22,38 +22,16 @@ namespace Super_Mario_Bros
             height = _height;
         }
 
-        public Rectangle Bounds()
+        public void Move(string direction)
         {
-            //Rectangle enemyRec = new Rectangle(x, y, width, height);
-            //Rectangle paddleRec = new Rectangle(p.x, p.y, p.width, p.height);
-            return new Rectangle(x, y, width, height);
-            //return this.Bounds();
-            //if (ballRec.IntersectsWith(paddleRec) && ticksSinceHit >= 60)
-            //{
-            //    if (y + size >= p.y)
-            //    {
-            //        if ((x + size) < p.x && (y + size) > p.y)
-            //        {
-            //            xSpeed = -Math.Abs(xSpeed);
-            //            ySpeed = Math.Abs(ySpeed);
-
-            //        }
-            //        else if (x > (p.x + p.width) && (y + size) > p.y)
-            //        {
-            //            xSpeed = Math.Abs(xSpeed);
-            //            ySpeed = Math.Abs(ySpeed);
-
-            //        }
-            //        else
-            //        {
-            //            ySpeed *= -1;
-            //        }
-            //    }
-
-            //    if (pMovingLeft)
-            //        xSpeed = -Math.Abs(xSpeed);
-            //    else if (pMovingRight)
-            //        xSpeed = Math.Abs(xSpeed);
+            if (direction == "left")
+            {
+                x -= xSpeed;
+            }
+            if (direction == "right")
+            {
+                x += xSpeed;
+            }
         }
     }
 }
