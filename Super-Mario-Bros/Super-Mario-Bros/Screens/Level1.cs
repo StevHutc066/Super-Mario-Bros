@@ -13,7 +13,7 @@ namespace Super_Mario_Bros
     public partial class Level1 : UserControl
     {
         #region Variables
-        Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, spaceDown, escapeDown, jump, gameOn, lastDirRight;
+        Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, spaceDown, escapeDown, jump, gameOn, lastDirRight, leftMove = true;
         static int lives, gravity, force, fallSpeed;
         public long gameTime;
         public static Mario mario;
@@ -23,7 +23,6 @@ namespace Super_Mario_Bros
         List<Enemy> enemies = new List<Enemy>();
         List<Image> images = new List<Image>();
         #endregion
-
 
         public Level1()
         {
@@ -37,7 +36,7 @@ namespace Super_Mario_Bros
             mario = new Mario(3, 415, 3, 3, "big");
 
             // Creates a gumba
-            Enemy goomba = new Enemy(250, 430, 67, 80, 3, 3, Sprites.Goomba);
+            Enemy goomba = new Enemy(800, 430, 67, 80, 3, 3, Sprites.Goomba);
 
             // Adds enemies into list
             enemies.Add(goomba);
@@ -101,7 +100,7 @@ namespace Super_Mario_Bros
             Form1.currentScore++;
             Form1.scoreLabel.Text = "Score: " + Convert.ToString(Form1.currentScore);
 
-            #region Moving
+            #region Mario Movement
             if (rightArrowDown && (mario.x + mario.width) <= this.Width)
             {
                 mario.Move("right");
@@ -128,8 +127,19 @@ namespace Super_Mario_Bros
             //mario.Fall();
             #endregion
 
+            #region Enemy Movement
             foreach (Enemy en in enemies)
             {
+                if (en.x <= 0)
+                    leftMove = false;
+                if (en.x >= this.Width - en.width)
+                    leftMove = true;
+
+                if (leftMove == true)
+                    en.Move("left");
+                else
+                    en.Move("right");
+
                 if (mario.HeroCollision(en))
                 {
                     gameTimer.Enabled = false;
@@ -143,8 +153,9 @@ namespace Super_Mario_Bros
                     form.Controls.Remove(this);
                 }
             }
+            #endregion
 
-                Refresh();
+            Refresh();
         }
 
         private void timeTimer_Tick(object sender, EventArgs e)
