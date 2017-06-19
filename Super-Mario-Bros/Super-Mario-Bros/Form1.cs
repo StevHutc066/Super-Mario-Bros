@@ -19,7 +19,7 @@ namespace Super_Mario_Bros
         }
 
         public static List<Classes.Highscores> highscoreList = new List<Classes.Highscores>();
-        public static uint currentScore = 0;
+        public static int currentScore = 0;
         public static Label scoreLabel = new Label();
         public static Label timeLabel = new Label();
         

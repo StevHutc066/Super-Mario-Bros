@@ -37,7 +37,7 @@ namespace Super_Mario_Bros
             mario = new Mario(3, 415, 3, 3, "big");
 
             // Creates a gumba
-            Enemy goomba = new Enemy(100, 415, 67, 80, 3, 3, Sprites.Goomba);
+            Enemy goomba = new Enemy(250, 430, 67, 80, 3, 3, Sprites.Goomba);
 
             // Adds enemies into list
             enemies.Add(goomba);
@@ -125,7 +125,23 @@ namespace Super_Mario_Bros
             //mario.Fall();
             #endregion
 
-            Refresh();
+            foreach (Enemy en in enemies)
+            {
+                if (mario.HeroCollision(en))
+                {
+                    gameTimer.Enabled = false;
+                    timeTimer.Enabled = false;
+                    Screens.LoseScreen ms = new Screens.LoseScreen();
+                    Form form = this.FindForm();
+
+                    ms.Location = new Point((form.Width - ms.Width) / 2, (form.Height - ms.Height) / 2);
+
+                    form.Controls.Add(ms);
+                    form.Controls.Remove(this);
+                }
+            }
+
+                Refresh();
         }
 
         private void timeTimer_Tick(object sender, EventArgs e)
@@ -158,15 +174,6 @@ namespace Super_Mario_Bros
                     break;
                 case Keys.Space:
                     spaceDown = true;
-                    gameTimer.Enabled = false;
-                    timeTimer.Enabled = false;
-                    Screens.LoseScreen ms = new Screens.LoseScreen();
-                    Form form = this.FindForm();
-
-                    ms.Location = new Point((form.Width - ms.Width) / 2, (form.Height - ms.Height) / 2);
-
-                    form.Controls.Add(ms);
-                    form.Controls.Remove(this);
                     break;
                 case Keys.Escape:
                     escapeDown = true;

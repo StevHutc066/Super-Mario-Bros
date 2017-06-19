@@ -111,7 +111,6 @@
             this.menuButton.TabIndex = 9;
             this.menuButton.Text = "Menu";
             this.menuButton.UseVisualStyleBackColor = false;
-            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
             // 
             // GameOverScreen
             // 

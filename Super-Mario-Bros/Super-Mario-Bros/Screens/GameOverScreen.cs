@@ -16,10 +16,5 @@ namespace Super_Mario_Bros.Screens
         {
             InitializeComponent();
         }
-
-        private void menuButton_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
