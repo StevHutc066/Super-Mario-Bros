@@ -86,10 +86,10 @@ namespace Super_Mario_Bros
             e.Graphics.DrawImage(mario.image, mario.x, mario.y, mario.width, mario.height);
 
             // Draws enemies
-            //foreach (Enemy en in enemies)
-            //{
+            foreach (Enemy en in enemies)
+            {
                 e.Graphics.DrawImage(enemies[0].image, enemies[0].x, enemies[0].y, enemies[0].width, enemies[0].height);
-            //}
+            }
             
         }
 
