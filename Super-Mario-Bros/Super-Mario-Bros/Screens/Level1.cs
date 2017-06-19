@@ -80,6 +80,11 @@ namespace Super_Mario_Bros
 
         }
 
+        public void OnLose()
+        {
+
+        }
+
         private void Level1_Paint(object sender, PaintEventArgs e)
         {
             // Draws Mario
@@ -206,7 +211,6 @@ namespace Super_Mario_Bros
                         pauseLabel.Visible = false;
                     }
                     break;
-
             }
 
             if (e.KeyCode == Keys.Up)
