@@ -82,7 +82,17 @@ namespace Super_Mario_Bros
 
         public void OnLose()
         {
+            gameTimer.Enabled = false;
+            timeTimer.Enabled = false;
+            Form1.scoreLabel.Visible = false;
+            Form1.timeLabel.Visible = false;
+            Screens.LoseScreen ms = new Screens.LoseScreen();
+            Form form = this.FindForm();
 
+            ms.Location = new Point((form.Width - ms.Width) / 2, (form.Height - ms.Height) / 2);
+
+            form.Controls.Add(ms);
+            form.Controls.Remove(this);
         }
 
         private void Level1_Paint(object sender, PaintEventArgs e)
@@ -147,15 +157,7 @@ namespace Super_Mario_Bros
 
                 if (mario.HeroCollision(en))
                 {
-                    gameTimer.Enabled = false;
-                    timeTimer.Enabled = false;
-                    Screens.LoseScreen ms = new Screens.LoseScreen();
-                    Form form = this.FindForm();
-
-                    ms.Location = new Point((form.Width - ms.Width) / 2, (form.Height - ms.Height) / 2);
-
-                    form.Controls.Add(ms);
-                    form.Controls.Remove(this);
+                    OnLose();
                 }
             }
             #endregion
