@@ -131,16 +131,14 @@ namespace Super_Mario_Bros
             foreach (Enemy en in enemies)
             {
                 if (en.x <= 0)
-                    //leftMove = false;
-                    en.Move("right");
+                    leftMove = false;
                 if (en.x >= this.Width - en.width)
-                    en.Move("left");
-                //leftMove = true;
+                    leftMove = true;
 
-                /*if (leftMove == true)
+                if (leftMove == true)
                     en.Move("left");
                 else
-                    en.Move("right");*/
+                    en.Move("right");
 
                 if (mario.HeroCollision(en))
                 {
