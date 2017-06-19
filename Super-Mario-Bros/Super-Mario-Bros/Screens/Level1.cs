@@ -76,6 +76,9 @@ namespace Super_Mario_Bros
             // Graphics object
             g = this.CreateGraphics();
 
+            // Resets current score
+            Form1.currentScore = 0;
+
         }
 
         private void Level1_Paint(object sender, PaintEventArgs e)
