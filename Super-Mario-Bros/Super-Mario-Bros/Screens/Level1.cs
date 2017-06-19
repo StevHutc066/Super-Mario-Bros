@@ -162,6 +162,9 @@ namespace Super_Mario_Bros
             }
             #endregion
 
+            if (gameTime % 500 == 0)
+                enemies[0].xSpeed += 1;
+
             Refresh();
         }
 
