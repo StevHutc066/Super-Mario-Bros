@@ -36,7 +36,7 @@ namespace Super_Mario_Bros
 
         public bool TopCollision(Mario mario)
         {
-            if (mario.y >= y)
+            if (mario.y + mario.height >= y)
             {
                 return true;
             }

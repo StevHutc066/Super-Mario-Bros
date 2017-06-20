@@ -159,8 +159,10 @@ namespace Super_Mario_Bros
 
                 if (mario.enemyCollision(en))
                 {
-                    if (en.)
-                    { }
+                    if (en.TopCollision(mario))
+                    {
+                        enemies.RemoveAt(0);
+                    }
                     else
                         OnLose();
                 }
