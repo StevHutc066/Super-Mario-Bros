@@ -33,5 +33,14 @@ namespace Super_Mario_Bros
                 x += xSpeed;
             }
         }
+
+        public bool TopCollision(Mario mario)
+        {
+            if (mario.y >= y)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

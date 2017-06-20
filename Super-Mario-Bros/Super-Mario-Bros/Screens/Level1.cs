@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using System.IO;
 
 namespace Super_Mario_Bros
 {
@@ -156,9 +157,12 @@ namespace Super_Mario_Bros
                 else
                     en.Move("right");
 
-                if (mario.HeroCollision(en))
+                if (mario.enemyCollision(en))
                 {
-                    OnLose();
+                    if (en.)
+                    { }
+                    else
+                        OnLose();
                 }
             }
             #endregion
