@@ -1,15 +1,19 @@
 ﻿using System;
+using System.Media;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows;
+using System.IO;
+
 
 namespace Super_Mario_Bros
 {
     class Functions
     {
-        public static Random rand = new Random();
+        public static System.Windows.Media.MediaPlayer powerUp;
 
         public void ChangeScreen(Form fm)
         {
@@ -20,6 +24,11 @@ namespace Super_Mario_Bros
 
             form.Controls.Add(ms);
             form.Controls.Remove(this);*/
+        }
+
+        public void Sound(string path)
+        {
+
         }
     }
 }

@@ -47,6 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,6 +59,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Animation.cs" />
@@ -69,6 +71,11 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sounds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sounds.resx</DependentUpon>
     </Compile>
     <Compile Include="Sprites.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -109,6 +116,10 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sounds.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Sounds.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Sprites.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -296,6 +307,67 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Goomba.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coin.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnterLevel.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FireMushroom.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jump.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kicking.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LevelClear.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LifeLoss.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OneUp.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PipeTravel.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PowerUp.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RunningOutOfTime.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stomp.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

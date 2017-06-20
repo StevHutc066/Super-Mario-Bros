@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Windows;
 
 namespace Super_Mario_Bros
 {
@@ -22,6 +23,7 @@ namespace Super_Mario_Bros
         public static int currentScore = 0;
         public static Label scoreLabel = new Label();
         public static Label timeLabel = new Label();
+
         
 
         private void Form1_Load(object sender, EventArgs e)
