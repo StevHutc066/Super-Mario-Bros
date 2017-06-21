@@ -16,7 +16,7 @@ namespace Super_Mario_Bros
     {
         #region Variables
         Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, spaceDown, escapeDown, jump, gameOn, lastDirRight, leftMove = true;
-        static int lives, gravity, force, fallSpeed;
+        static int lives, gravity, force, fallSpeed, enemyIndex;
         public long gameTime;
         public static Mario mario;
         public static Enemy enemy;
@@ -34,6 +34,9 @@ namespace Super_Mario_Bros
 
         public void OnStart()
         {
+            //Clears the enemy list
+            enemies.Clear();
+
             // Creates a new Mario character at start
             mario = new Mario(3, 415, 3, 3, "big");
 
@@ -107,9 +110,13 @@ namespace Super_Mario_Bros
             {
                 e.Graphics.DrawImage(enemies[0].image, enemies[0].x, enemies[0].y, enemies[0].width, enemies[0].height);
             }
-            
+
         }
 
+        public void AddEnemy()
+        {
+            Enemy goomba = new Enemy(800, 430, 67, 80, 3, 3, Sprites.Goomba);
+        }
 
         #region Timer Ticks
         private void gameTimer_Tick(object sender, EventArgs e)
@@ -147,8 +154,9 @@ namespace Super_Mario_Bros
             #region Enemy Movement
             foreach (Enemy en in enemies)
             {
-                if (en.x <= 0)
-                    leftMove = false;
+                if (en != null)
+                    if (en.x <= 0)
+                        leftMove = false;
                 if (en.x >= this.Width - en.width)
                     leftMove = true;
 
@@ -160,14 +168,17 @@ namespace Super_Mario_Bros
                 if (mario.enemyCollision(en))
                 {
                     if (en.TopCollision(mario))
-                    { }
+                    {
+                        enemies.Remove(en);
+                    }
                     else
                         OnLose();
                 }
             }
+
             #endregion
 
-            if (gameTime % 250 == 0)
+            if (gameTime % 500 == 0)
                 enemies[0].xSpeed += 1;
 
             Refresh();
@@ -212,12 +223,16 @@ namespace Super_Mario_Bros
                     if (gameOn)
                     {
                         gameOn = false;
+                        gameTimer.Stop();
+                        timeTimer.Stop();
                         pauseLabel.Text = "Paused";
                         pauseLabel.Visible = true;
                     }
                     else
                     {
                         gameOn = true;
+                        gameTimer.Start();
+                        timeTimer.Start();
                         pauseLabel.Visible = false;
                     }
                     break;
@@ -249,10 +264,10 @@ namespace Super_Mario_Bros
             {
                 switch (e.KeyCode)
                 {
-                    case Keys.Left:                             
-                        mario.image = Sprites.LeftStand;   
-                        lastDirRight = false;                   
-                        leftArrowDown = false;             
+                    case Keys.Left:
+                        mario.image = Sprites.LeftStand;
+                        lastDirRight = false;
+                        leftArrowDown = false;
                         break;
                     case Keys.Right:
                         mario.image = Sprites.RightStand;
