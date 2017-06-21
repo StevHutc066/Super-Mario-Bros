@@ -55,7 +55,6 @@
             // timeTimer
             // 
             this.timeTimer.Enabled = true;
-            this.timeTimer.Interval = 1;
             this.timeTimer.Tick += new System.EventHandler(this.timeTimer_Tick);
             // 
             // Level1

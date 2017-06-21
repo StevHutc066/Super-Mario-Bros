@@ -63,6 +63,26 @@ namespace Super_Mario_Bros {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FirstWalkLeft {
+            get {
+                object obj = ResourceManager.GetObject("FirstWalkLeft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FirstWalkRight {
+            get {
+                object obj = ResourceManager.GetObject("FirstWalkRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Goomba {
             get {
                 object obj = ResourceManager.GetObject("Goomba", resourceCulture);
@@ -73,9 +93,9 @@ namespace Super_Mario_Bros {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LeftJump {
+        internal static System.Drawing.Bitmap JumpLeft {
             get {
-                object obj = ResourceManager.GetObject("LeftJump", resourceCulture);
+                object obj = ResourceManager.GetObject("JumpLeft", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +103,9 @@ namespace Super_Mario_Bros {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LeftStand {
+        internal static System.Drawing.Bitmap JumpRight {
             get {
-                object obj = ResourceManager.GetObject("LeftStand", resourceCulture);
+                object obj = ResourceManager.GetObject("JumpRight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +113,9 @@ namespace Super_Mario_Bros {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LeftWalk {
+        internal static System.Drawing.Bitmap SecondWalkLeft {
             get {
-                object obj = ResourceManager.GetObject("LeftWalk", resourceCulture);
+                object obj = ResourceManager.GetObject("SecondWalkLeft", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +123,9 @@ namespace Super_Mario_Bros {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap RightJump {
+        internal static System.Drawing.Bitmap SecondWalkRight {
             get {
-                object obj = ResourceManager.GetObject("RightJump", resourceCulture);
+                object obj = ResourceManager.GetObject("SecondWalkRight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +133,9 @@ namespace Super_Mario_Bros {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap RightStand {
+        internal static System.Drawing.Bitmap StandLeft {
             get {
-                object obj = ResourceManager.GetObject("RightStand", resourceCulture);
+                object obj = ResourceManager.GetObject("StandLeft", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +143,29 @@ namespace Super_Mario_Bros {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap RightWalk {
+        internal static System.Drawing.Bitmap StandRight {
             get {
-                object obj = ResourceManager.GetObject("RightWalk", resourceCulture);
+                object obj = ResourceManager.GetObject("StandRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ThirdWalkLeft {
+            get {
+                object obj = ResourceManager.GetObject("ThirdWalkLeft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ThirdWalkRight {
+            get {
+                object obj = ResourceManager.GetObject("ThirdWalkRight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

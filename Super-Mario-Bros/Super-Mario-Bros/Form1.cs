@@ -51,7 +51,7 @@ namespace Super_Mario_Bros
             l.Location = p;
         }
 
-        private void LoadHighscores() // Method for loading any saved highscores in the highscoreDB xml file
+        private void LoadHighscores() // Method for loading any saved highscores in the highscoreDB XML file
         {
             XmlDocument doc = new XmlDocument();
             doc.Load("highscoreDB.xml");

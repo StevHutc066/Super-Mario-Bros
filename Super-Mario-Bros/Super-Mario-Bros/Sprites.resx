@@ -118,25 +118,37 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FirstWalkLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\FirstWalkLeft.tiff;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FirstWalkRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\FirstWalkRight.tiff;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Goomba" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Goomba.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LeftJump" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\jump_l1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="JumpLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\JumpLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LeftStand" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\stand_l1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="JumpRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\JumpRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LeftWalk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\walk_l1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SecondWalkLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\SecondWalkLeft.tiff;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RightJump" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\jump_r1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SecondWalkRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\SecondWalkRight.tiff;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RightStand" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\stand_r1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="StandLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\StandLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RightWalk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\walk_r1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="StandRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\StandRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ThirdWalkLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ThirdWalkLeft.tiff;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ThirdWalkRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ThirdWalkRight.tiff;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -17,7 +17,7 @@ namespace Super_Mario_Bros
         #region Variables
         Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, spaceDown, escapeDown, jump, gameOn, lastDirRight, leftMove = true;
         static int lives, gravity, force, fallSpeed, enemyIndex;
-        public long gameTime;
+        public long gameTime = 0;
         public static Mario mario;
         public static Enemy enemy;
         Graphics g;
@@ -116,6 +116,7 @@ namespace Super_Mario_Bros
         public void AddEnemy()
         {
             Enemy goomba = new Enemy(800, 430, 67, 80, 3, 3, Sprites.Goomba);
+            enemies.Add(goomba);
         }
 
         #region Timer Ticks
@@ -178,7 +179,7 @@ namespace Super_Mario_Bros
 
             #endregion
 
-            if (gameTime % 500 == 0)
+            if (Form1.currentScore % 250 == 0)
                 enemies[0].xSpeed += 1;
 
             Refresh();
@@ -201,7 +202,7 @@ namespace Super_Mario_Bros
                     leftArrowDown = true;
                     lastDirRight = false;
                     if (!jump)
-                        mario.image = Sprites.LeftStand;
+                        mario.image = Sprites.StandLeft;
                     break;
                 case Keys.Down:
                     downArrowDown = true;
@@ -210,7 +211,7 @@ namespace Super_Mario_Bros
                     rightArrowDown = true;
                     lastDirRight = true;
                     if (!jump)
-                        mario.image = Sprites.RightStand;
+                        mario.image = Sprites.StandRight;
                     break;
                 case Keys.Space:
                     spaceDown = true;
@@ -245,11 +246,11 @@ namespace Super_Mario_Bros
                 {
                     if (lastDirRight)       //Checks direction, changes jump image
                     {
-                        mario.image = Sprites.RightJump;
+                        mario.image = Sprites.JumpRight;
                     }
                     else
                     {
-                        mario.image = Sprites.LeftJump;
+                        mario.image = Sprites.JumpLeft;
                     }
                     jump = true;     // Mairo is jumping
                     force = gravity;        //Force to be moved up changes
@@ -265,12 +266,12 @@ namespace Super_Mario_Bros
                 switch (e.KeyCode)
                 {
                     case Keys.Left:
-                        mario.image = Sprites.LeftStand;
+                        mario.image = Sprites.StandLeft;
                         lastDirRight = false;
                         leftArrowDown = false;
                         break;
                     case Keys.Right:
-                        mario.image = Sprites.RightStand;
+                        mario.image = Sprites.StandRight;
                         lastDirRight = true;
                         rightArrowDown = false;
                         break;

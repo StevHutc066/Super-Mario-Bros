@@ -48,12 +48,6 @@ namespace Super_Mario_Bros
             return false;
         }
 
-        public Rectangle Bounds()
-        {
-            Rectangle rect = new Rectangle(x, y, width, height); 
-            return rect;
-        }
-
         public bool enemyCollision(Enemy e)
         {
             Rectangle heroRec = new Rectangle(x, y, width, height);

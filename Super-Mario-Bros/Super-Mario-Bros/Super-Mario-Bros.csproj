@@ -47,6 +47,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Lines">
+      <HintPath>\\Mac\Home\Desktop\Lines.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -368,6 +371,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Stomp.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FirstWalkLeft.tiff" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FirstWalkRight.tiff" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JumpLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JumpRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SecondWalkLeft.tiff" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SecondWalkRight.tiff" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StandLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StandRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThirdWalkLeft.tiff" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThirdWalkRight.tiff" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
