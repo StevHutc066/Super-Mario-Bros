@@ -159,7 +159,7 @@ namespace Super_Mario_Bros
 
                 if (mario.enemyCollision(en))
                 {
-                    if (en.)
+                    if (en.TopCollision(mario))
                     { }
                     else
                         OnLose();
@@ -167,7 +167,7 @@ namespace Super_Mario_Bros
             }
             #endregion
 
-            if (gameTime % 500 == 0)
+            if (gameTime % 250 == 0)
                 enemies[0].xSpeed += 1;
 
             Refresh();
