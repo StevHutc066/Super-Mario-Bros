@@ -147,8 +147,6 @@ namespace Super_Mario_Bros
                 else
                     mario.image = Sprites.LeftStand;
             }
-            //else
-            //mario.Fall();
             #endregion
 
             #region Enemy Movement
@@ -157,6 +155,7 @@ namespace Super_Mario_Bros
                 if (en != null)
                     if (en.x <= 0)
                         leftMove = false;
+
                 if (en.x >= this.Width - en.width)
                     leftMove = true;
 
@@ -170,6 +169,7 @@ namespace Super_Mario_Bros
                     if (en.TopCollision(mario))
                     {
                         enemies.Remove(en);
+                        AddEnemy();
                     }
                     else
                         OnLose();
