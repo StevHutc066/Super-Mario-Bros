@@ -28,59 +28,110 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.playButton = new System.Windows.Forms.Label();
-            this.exitButton = new System.Windows.Forms.Label();
-            this.scoresButton = new System.Windows.Forms.Label();
+            this.playLabel = new System.Windows.Forms.Label();
+            this.exitLabel = new System.Windows.Forms.Label();
+            this.scoresLabel = new System.Windows.Forms.Label();
             this.pointer = new System.Windows.Forms.PictureBox();
+            this.playButton = new System.Windows.Forms.Button();
+            this.scoresButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pointer)).BeginInit();
             this.SuspendLayout();
             // 
-            // playButton
+            // playLabel
             // 
-            this.playButton.AutoSize = true;
-            this.playButton.BackColor = System.Drawing.Color.Transparent;
-            this.playButton.Font = new System.Drawing.Font("Segoe Script", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playButton.ForeColor = System.Drawing.Color.Red;
-            this.playButton.Location = new System.Drawing.Point(194, 382);
-            this.playButton.Name = "playButton";
-            this.playButton.Size = new System.Drawing.Size(150, 80);
-            this.playButton.TabIndex = 0;
-            this.playButton.Text = "Play";
+            this.playLabel.AutoSize = true;
+            this.playLabel.BackColor = System.Drawing.Color.Transparent;
+            this.playLabel.Font = new System.Drawing.Font("Segoe Print", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playLabel.ForeColor = System.Drawing.Color.Red;
+            this.playLabel.Location = new System.Drawing.Point(57, 66);
+            this.playLabel.Name = "playLabel";
+            this.playLabel.Size = new System.Drawing.Size(141, 85);
+            this.playLabel.TabIndex = 2;
+            this.playLabel.Text = "Play";
             // 
-            // exitButton
+            // exitLabel
             // 
-            this.exitButton.AutoSize = true;
-            this.exitButton.BackColor = System.Drawing.Color.Transparent;
-            this.exitButton.Font = new System.Drawing.Font("Segoe Script", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.ForeColor = System.Drawing.Color.Blue;
-            this.exitButton.Location = new System.Drawing.Point(660, 382);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(146, 80);
-            this.exitButton.TabIndex = 1;
-            this.exitButton.Text = "Exit";
+            this.exitLabel.AutoSize = true;
+            this.exitLabel.BackColor = System.Drawing.Color.Transparent;
+            this.exitLabel.Font = new System.Drawing.Font("Segoe Print", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitLabel.ForeColor = System.Drawing.Color.Blue;
+            this.exitLabel.Location = new System.Drawing.Point(58, 231);
+            this.exitLabel.Name = "exitLabel";
+            this.exitLabel.Size = new System.Drawing.Size(132, 85);
+            this.exitLabel.TabIndex = 3;
+            this.exitLabel.Text = "Exit";
             // 
-            // scoresButton
+            // scoresLabel
             // 
-            this.scoresButton.AutoSize = true;
-            this.scoresButton.BackColor = System.Drawing.Color.Transparent;
-            this.scoresButton.Font = new System.Drawing.Font("Segoe Script", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoresButton.ForeColor = System.Drawing.Color.Blue;
-            this.scoresButton.Location = new System.Drawing.Point(409, 280);
-            this.scoresButton.Name = "scoresButton";
-            this.scoresButton.Size = new System.Drawing.Size(183, 80);
-            this.scoresButton.TabIndex = 2;
-            this.scoresButton.Text = "Scores";
+            this.scoresLabel.AutoSize = true;
+            this.scoresLabel.BackColor = System.Drawing.Color.Transparent;
+            this.scoresLabel.Font = new System.Drawing.Font("Segoe Print", 36F, System.Drawing.FontStyle.Bold);
+            this.scoresLabel.ForeColor = System.Drawing.Color.Blue;
+            this.scoresLabel.Location = new System.Drawing.Point(37, 146);
+            this.scoresLabel.Name = "scoresLabel";
+            this.scoresLabel.Size = new System.Drawing.Size(188, 85);
+            this.scoresLabel.TabIndex = 3;
+            this.scoresLabel.Text = "Scores";
             // 
             // pointer
             // 
             this.pointer.BackColor = System.Drawing.Color.Transparent;
             this.pointer.Image = global::Super_Mario_Bros.Properties.Resources.TriangleRight;
-            this.pointer.Location = new System.Drawing.Point(152, 403);
+            this.pointer.Location = new System.Drawing.Point(350, 319);
             this.pointer.Name = "pointer";
             this.pointer.Size = new System.Drawing.Size(59, 39);
             this.pointer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pointer.TabIndex = 11;
             this.pointer.TabStop = false;
+            // 
+            // playButton
+            // 
+            this.playButton.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.playButton.FlatAppearance.BorderSize = 0;
+            this.playButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.playButton.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playButton.ForeColor = System.Drawing.Color.Blue;
+            this.playButton.Location = new System.Drawing.Point(424, 309);
+            this.playButton.Name = "playButton";
+            this.playButton.Size = new System.Drawing.Size(151, 59);
+            this.playButton.TabIndex = 0;
+            this.playButton.Text = "Play";
+            this.playButton.UseVisualStyleBackColor = false;
+            this.playButton.Click += new System.EventHandler(this.playButton_Click);
+            this.playButton.Enter += new System.EventHandler(this.playButton_Enter);
+            // 
+            // scoresButton
+            // 
+            this.scoresButton.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.scoresButton.FlatAppearance.BorderSize = 0;
+            this.scoresButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.scoresButton.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoresButton.ForeColor = System.Drawing.Color.Blue;
+            this.scoresButton.Location = new System.Drawing.Point(424, 377);
+            this.scoresButton.Name = "scoresButton";
+            this.scoresButton.Size = new System.Drawing.Size(153, 59);
+            this.scoresButton.TabIndex = 1;
+            this.scoresButton.Text = "Scores";
+            this.scoresButton.UseVisualStyleBackColor = false;
+            this.scoresButton.Click += new System.EventHandler(this.scoresButton_Click);
+            this.scoresButton.Enter += new System.EventHandler(this.scoresButton_Enter);
+            // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.exitButton.FlatAppearance.BorderSize = 0;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.Font = new System.Drawing.Font("Segoe Print", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.ForeColor = System.Drawing.Color.Blue;
+            this.exitButton.Location = new System.Drawing.Point(424, 445);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(153, 59);
+            this.exitButton.TabIndex = 2;
+            this.exitButton.Text = "Exit";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.exitButton.Enter += new System.EventHandler(this.exitButton_Enter);
             // 
             // MenuScreen
             // 
@@ -89,13 +140,17 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::Super_Mario_Bros.Properties.Resources.SuperMarioBros;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.pointer);
-            this.Controls.Add(this.scoresButton);
             this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.scoresButton);
             this.Controls.Add(this.playButton);
+            this.Controls.Add(this.pointer);
+            this.Controls.Add(this.scoresLabel);
+            this.Controls.Add(this.exitLabel);
+            this.Controls.Add(this.playLabel);
             this.DoubleBuffered = true;
             this.Name = "MenuScreen";
             this.Size = new System.Drawing.Size(1000, 600);
+            this.Load += new System.EventHandler(this.MenuScreen_Load);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MenuScreen_KeyUp);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.MenuScreen_PreviewKeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pointer)).EndInit();
@@ -106,9 +161,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label playButton;
-        private System.Windows.Forms.Label exitButton;
-        private System.Windows.Forms.Label scoresButton;
+        private System.Windows.Forms.Label playLabel;
+        private System.Windows.Forms.Label exitLabel;
+        private System.Windows.Forms.Label scoresLabel;
         private System.Windows.Forms.PictureBox pointer;
+        private System.Windows.Forms.Button playButton;
+        private System.Windows.Forms.Button scoresButton;
+        private System.Windows.Forms.Button exitButton;
     }
 }

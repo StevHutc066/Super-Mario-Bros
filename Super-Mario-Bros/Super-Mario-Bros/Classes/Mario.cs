@@ -25,7 +25,7 @@ namespace Super_Mario_Bros
 
             if (_state == "big")
             {
-                image = Sprites.RightStand;
+                image = Sprites.StandRight;
             }
         }
 

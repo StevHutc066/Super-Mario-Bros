@@ -34,9 +34,9 @@
             // output
             // 
             this.output.BackColor = System.Drawing.Color.Transparent;
-            this.output.Font = new System.Drawing.Font("Segoe Script", 19F, System.Drawing.FontStyle.Bold);
+            this.output.Font = new System.Drawing.Font("Segoe Print", 75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Document, ((byte)(0)));
             this.output.ForeColor = System.Drawing.Color.White;
-            this.output.Location = new System.Drawing.Point(258, 107);
+            this.output.Location = new System.Drawing.Point(258, 111);
             this.output.Name = "output";
             this.output.Size = new System.Drawing.Size(582, 424);
             this.output.TabIndex = 0;

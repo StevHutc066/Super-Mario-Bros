@@ -47,7 +47,7 @@ namespace Super_Mario_Bros
             enemies.Add(goomba);
 
             // Creates new animation
-            walkRightAnimation = new Animation(new Bitmap[] { Sprites.RightStand, Sprites.RightWalk });
+            walkRightAnimation = new Animation(new Bitmap[] { Sprites.StandRight, Sprites.FirstWalkRight });
 
             // Starts the game logic
             gameTimer.Enabled = true;
@@ -144,38 +144,63 @@ namespace Super_Mario_Bros
                 jump = false;
 
                 if (lastDirRight)
-                    mario.image = Sprites.RightStand;
+                    mario.image = Sprites.StandRight;
                 else
-                    mario.image = Sprites.LeftStand;
+                    mario.image = Sprites.StandLeft;
             }
             #endregion
 
             #region Enemy Movement
-            foreach (Enemy en in enemies)
+            for (int i = 0; i < enemies.Count; i++)
             {
-                if (en != null)
-                    if (en.x <= 0)
+                if (enemies[i] != null)
+                    if (enemies[i].x <= 0)
                         leftMove = false;
 
-                if (en.x >= this.Width - en.width)
+                if (enemies[i].x >= this.Width - enemies[i].width)
                     leftMove = true;
 
                 if (leftMove == true)
-                    en.Move("left");
+                    enemies[i].Move("left");
                 else
-                    en.Move("right");
+                    enemies[i].Move("right");
 
-                if (mario.enemyCollision(en))
+                if (mario.enemyCollision(enemies[i]))
                 {
-                    if (en.TopCollision(mario))
+                    if (enemies[i].TopCollision(mario))
                     {
-                        enemies.Remove(en);
+                        enemies.Remove(enemies[i]);
                         AddEnemy();
                     }
                     else
                         OnLose();
                 }
-            }
+            }       
+            //foreach (Enemy en in enemies)
+            //{
+            //    if (en != null)
+            //        if (en.x <= 0)
+            //            leftMove = false;
+
+            //    if (en.x >= this.Width - en.width)
+            //        leftMove = true;
+
+            //    if (leftMove == true)
+            //        en.Move("left");
+            //    else
+            //        en.Move("right");
+
+            //    if (mario.enemyCollision(en))
+            //    {
+            //        if (en.TopCollision(mario))
+            //        {
+            //            enemies.Remove(en);
+            //            AddEnemy();
+            //        }
+            //        else
+            //            OnLose();
+            //    }
+            //}
 
             #endregion
 
