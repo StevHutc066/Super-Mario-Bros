@@ -394,6 +394,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Battle.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Content Include="Resources\Button.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

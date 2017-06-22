@@ -16,11 +16,11 @@ namespace Super_Mario_Bros.Screens
         {
             InitializeComponent();
         }
-
+        private static System.Windows.Media.MediaPlayer buttonSound = new System.Windows.Media.MediaPlayer();
         #region Button Events
         private void playButton_Click(object sender, EventArgs e)
         {
-            Form1.buttonSound.Play();
+            buttonSound.Play();
 
             // Goes to the game screen
             Level1 l1 = new Level1();
@@ -76,5 +76,11 @@ namespace Super_Mario_Bros.Screens
             playButton.ForeColor = scoresButton.ForeColor = Color.Blue;
         }
         #endregion
+
+        private void MenuScreen_Load(object sender, EventArgs e)
+        {
+            buttonSound.Open(new Uri(Application.StartupPath + "/Resources/Button.wav"));
+            buttonSound.Volume = 1;
+        }
     }
 }
