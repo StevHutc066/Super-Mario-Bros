@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Super_Mario_Bros.Screens
 {
@@ -16,11 +17,12 @@ namespace Super_Mario_Bros.Screens
         {
             InitializeComponent();
         }
-        private static System.Windows.Media.MediaPlayer buttonSound = new System.Windows.Media.MediaPlayer();
+        public static SoundPlayer buttonSoundPlayer = new SoundPlayer(Sounds.Button);
+
         #region Button Events
         private void playButton_Click(object sender, EventArgs e)
         {
-            buttonSound.Play();
+            buttonSoundPlayer.PlaySync();
 
             // Goes to the game screen
             Level1 l1 = new Level1();
@@ -31,11 +33,13 @@ namespace Super_Mario_Bros.Screens
             form.Controls.Add(l1);
             form.Controls.Remove(this);
             Form1.enterLevelSound.Play();
+
+            
         }
 
         private void scoresButton_Click(object sender, EventArgs e)
         {
-            Form1.buttonSound.Play();
+            buttonSoundPlayer.PlaySync();
 
             // Goes to the score screen
             ScoreScreen ss = new ScoreScreen();
@@ -49,7 +53,7 @@ namespace Super_Mario_Bros.Screens
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            Form1.buttonSound.Play();
+            buttonSoundPlayer.PlaySync();
 
             // Exits the game
             Application.Exit();
@@ -76,11 +80,5 @@ namespace Super_Mario_Bros.Screens
             playButton.ForeColor = scoresButton.ForeColor = Color.Blue;
         }
         #endregion
-
-        private void MenuScreen_Load(object sender, EventArgs e)
-        {
-            buttonSound.Open(new Uri(Application.StartupPath + "/Resources/Button.wav"));
-            buttonSound.Volume = 1;
-        }
     }
 }

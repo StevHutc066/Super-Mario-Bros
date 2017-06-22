@@ -72,6 +72,15 @@ namespace Super_Mario_Bros {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Button {
+            get {
+                return ResourceManager.GetStream("Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream Coin {
             get {
                 return ResourceManager.GetStream("Coin", resourceCulture);

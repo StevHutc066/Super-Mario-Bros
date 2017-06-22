@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.IO;
+using System.Media;
 
 namespace Super_Mario_Bros
 {
@@ -36,6 +37,9 @@ namespace Super_Mario_Bros
         public static System.Windows.Media.MediaPlayer powerUpSound;
         public static System.Windows.Media.MediaPlayer runningOutOfTimeSound;
         public static System.Windows.Media.MediaPlayer kickingSound;
+        public static System.Windows.Media.MediaPlayer battleSound;
+
+        
 
 
         private void Form1_Load(object sender, EventArgs e)

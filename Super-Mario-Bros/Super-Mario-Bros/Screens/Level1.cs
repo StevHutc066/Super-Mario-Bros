@@ -26,6 +26,7 @@ namespace Super_Mario_Bros
         Animation walkRightAnimation, walkLeftAnimation;
         List<Enemy> enemies = new List<Enemy>();
         List<Image> images = new List<Image>();
+        SoundPlayer startSound = new SoundPlayer(Sounds.Battle);
         #endregion
 
         public Level1()
@@ -91,30 +92,19 @@ namespace Super_Mario_Bros
             //Form1.kickingSound.Open(new Uri(Application.StartupPath + "/Resources/KickingSound.wav"));
 
             Form1.enterLevelSound = MakePlayer(Form1.enterLevelSound, "EnterLevel.wav");
-            Form1.jumpSound = MakePlayer(Form1.enterLevelSound, "Jump.wav");
-            Form1.levelClearSound = MakePlayer(Form1.enterLevelSound, "LevelClear.wav");
-            Form1.lifeLossSound = MakePlayer(Form1.enterLevelSound, "LifeLoss.wav");
-            Form1.oneUpSound = MakePlayer(Form1.enterLevelSound, "OneUp.wav");
-            Form1.pauseSound = MakePlayer(Form1.enterLevelSound, "Pause.wav");
-            Form1.powerUpSound = MakePlayer(Form1.enterLevelSound, "PowerUp.wav");
-            Form1.runningOutOfTimeSound = MakePlayer(Form1.enterLevelSound, "RunningOutOfTime.wav");
+            Form1.jumpSound = MakePlayer(Form1.jumpSound, "Jump.wav");
+            Form1.levelClearSound = MakePlayer(Form1.levelClearSound, "LevelClear.wav");
+            Form1.lifeLossSound = MakePlayer(Form1.lifeLossSound, "LifeLoss.wav");
+            Form1.oneUpSound = MakePlayer(Form1.oneUpSound, "OneUp.wav");
+            Form1.pauseSound = MakePlayer(Form1.pauseSound, "Pause.wav");
+            Form1.powerUpSound = MakePlayer(Form1.powerUpSound, "PowerUp.wav");
+            Form1.runningOutOfTimeSound = MakePlayer(Form1.runningOutOfTimeSound, "RunningOutOfTime.wav");
             //Form1.buttonSound = MakePlayer(Form1.enterLevelSound, "Stomp.wav");
-            Form1.kickingSound = MakePlayer(Form1.enterLevelSound, "KickingSound.wav"); 
+            Form1.kickingSound = MakePlayer(Form1.kickingSound, "KickingSound.wav");
+            Form1.battleSound = MakePlayer(Form1.battleSound, "Battle.wav");
+            startSound.PlaySync();
         #endregion
     }
-        /// <summary>
-        /// Takes a null MediaPlayer and gives it a sound directory link
-        /// </summary>
-        /// <param name="mp"></param>
-        /// <param name="soundName"></param>
-        /// <returns>Full initiated media player</returns>
-        public static MediaPlayer MakePlayer(MediaPlayer mp, string soundName)
-        {
-            mp = new MediaPlayer();
-            mp.Open(new Uri(Application.StartupPath + "/Resources/" + soundName));
-            mp.Volume = 1;
-            return mp;
-        }
 
         public void OnLose()
         {
@@ -129,19 +119,6 @@ namespace Super_Mario_Bros
 
             form.Controls.Add(ms);
             form.Controls.Remove(this);
-        }
-
-        private void Level1_Paint(object sender, PaintEventArgs e)
-        {
-            // Draws Mario
-            e.Graphics.DrawImage(mario.image, mario.x, mario.y, mario.width, mario.height);
-
-            // Draws enemies
-            foreach (Enemy en in enemies)
-            {
-                e.Graphics.DrawImage(enemies[0].image, enemies[0].x, enemies[0].y, enemies[0].width, enemies[0].height);
-            }
-
         }
 
         public void AddEnemy()
@@ -199,46 +176,20 @@ namespace Super_Mario_Bros
 
                 if (mario.enemyCollision(enemies[i]))
                 {
-                    Form1.kickingSound.Stop();
-                    Form1.kickingSound.Play();
-                    if (enemies[i].TopCollision(mario))
-                    {
-                        enemies.Remove(enemies[i]);
-                        AddEnemy();
-                    }
-                    else
+                    if (!enemies[i].TopCollision(mario))
                     {
                         OnLose();
+                        Form1.lifeLossSound.Play();
                     }
-                        
+                    else 
+                    {
+                        Form1.kickingSound.Stop();
+                        Form1.kickingSound.Play();
+                        enemies.Remove(enemies[i]);
+                        AddEnemy();
+                    }                     
                 }
             }       
-            //foreach (Enemy en in enemies)
-            //{
-            //    if (en != null)
-            //        if (en.x <= 0)
-            //            leftMove = false;
-
-            //    if (en.x >= this.Width - en.width)
-            //        leftMove = true;
-
-            //    if (leftMove == true)
-            //        en.Move("left");
-            //    else
-            //        en.Move("right");
-
-            //    if (mario.enemyCollision(en))
-            //    {
-            //        if (en.TopCollision(mario))
-            //        {
-            //            enemies.Remove(en);
-            //            AddEnemy();
-            //        }
-            //        else
-            //            OnLose();
-            //    }
-            //}
-
             #endregion
 
             if (Form1.currentScore % 250 == 0)
@@ -253,7 +204,6 @@ namespace Super_Mario_Bros
             Form1.timeLabel.Text = "Time: " + Convert.ToString(gameTime);
         }
         #endregion
-
 
         #region Key Presses
         private void Level1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -283,8 +233,10 @@ namespace Super_Mario_Bros
                     gameTimer.Enabled = false;
                     break;
                 case Keys.P:
+                    Form1.pauseSound.Stop();
+                    Form1.pauseSound.Play();
                     if (gameOn)
-                    {
+                    {              
                         gameOn = false;
                         gameTimer.Stop();
                         timeTimer.Stop();
@@ -297,6 +249,7 @@ namespace Super_Mario_Bros
                         gameTimer.Start();
                         timeTimer.Start();
                         pauseLabel.Visible = false;
+                        Thread.Sleep(500);
                     }
                     break;
             }
@@ -365,22 +318,34 @@ namespace Super_Mario_Bros
 
             }
         }
-
-        //public Boolean NoCollision(Mario mario)
-        //{
-        //    foreach (Enemy enmy in enemies)
-
-        //        if (enmy != null)
-        //        {
-        //            Rectangle rect = mario.Bounds();
-        //            //if (rect.IntersectsWith(enmy.Bounds))
-        //            //{
-        //            //    return true;
-        //            //}
-        //        }
-        //    return false;
-        //}
         #endregion
+
+        /// <summary>
+        /// Takes a null MediaPlayer and gives it a sound directory link
+        /// </summary>
+        /// <param name="mp"></param>
+        /// <param name="soundName"></param>
+        /// <returns>Full initiated media player</returns>
+        public static MediaPlayer MakePlayer(MediaPlayer mp, string soundName)
+        {
+            mp = new MediaPlayer();
+            mp.Open(new Uri(Application.StartupPath + "/Resources/" + soundName));
+            mp.Volume = 1;
+            return mp;
+        }
+
+        private void Level1_Paint(object sender, PaintEventArgs e)
+        {
+            // Draws Mario
+            e.Graphics.DrawImage(mario.image, mario.x, mario.y, mario.width, mario.height);
+
+            // Draws enemies
+            foreach (Enemy en in enemies)
+            {
+                e.Graphics.DrawImage(enemies[0].image, enemies[0].x, enemies[0].y, enemies[0].width, enemies[0].height);
+            }
+
+        }
     }
 
 }
