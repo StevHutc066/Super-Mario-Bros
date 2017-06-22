@@ -25,17 +25,23 @@ namespace Super_Mario_Bros
         public static Label timeLabel = new Label();
 
         //Sounds
-        public static System.Windows.Media.MediaPlayer a1;
-        public static System.Windows.Media.MediaPlayer a2;
-        public static System.Windows.Media.MediaPlayer a3;
-        public static System.Windows.Media.MediaPlayer a4;
-        public static System.Windows.Media.MediaPlayer a5;
-        public static System.Windows.Media.MediaPlayer a6;
-        public static System.Windows.Media.MediaPlayer a7;
+        public static System.Windows.Media.MediaPlayer buttonSound;
+        public static System.Windows.Media.MediaPlayer coinSound;
+        public static System.Windows.Media.MediaPlayer enterLevelSound;
+        public static System.Windows.Media.MediaPlayer jumpSound;
+        public static System.Windows.Media.MediaPlayer levelClearSound;
+        public static System.Windows.Media.MediaPlayer lifeLossSound;
+        public static System.Windows.Media.MediaPlayer oneUpSound;
+        public static System.Windows.Media.MediaPlayer pauseSound;
+        public static System.Windows.Media.MediaPlayer powerUpSound;
+        public static System.Windows.Media.MediaPlayer runningOutOfTimeSound;
+        public static System.Windows.Media.MediaPlayer kickingSound;
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Level1.MakePlayer(buttonSound, "Button.wav");
+
             CreateLabel(scoreLabel, new Point(520, this.Height - scoreLabel.Height * 3));
             
             CreateLabel(timeLabel, new Point(330, this.Height - timeLabel.Height * 3));

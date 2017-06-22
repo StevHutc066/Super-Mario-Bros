@@ -20,6 +20,8 @@ namespace Super_Mario_Bros.Screens
         #region Button Events
         private void playButton_Click(object sender, EventArgs e)
         {
+            Form1.buttonSound.Play();
+
             // Goes to the game screen
             Level1 l1 = new Level1();
             Form form = this.FindForm();
@@ -28,10 +30,13 @@ namespace Super_Mario_Bros.Screens
 
             form.Controls.Add(l1);
             form.Controls.Remove(this);
+            Form1.enterLevelSound.Play();
         }
 
         private void scoresButton_Click(object sender, EventArgs e)
         {
+            Form1.buttonSound.Play();
+
             // Goes to the score screen
             ScoreScreen ss = new ScoreScreen();
             Form form = this.FindForm();
@@ -44,6 +49,8 @@ namespace Super_Mario_Bros.Screens
 
         private void exitButton_Click(object sender, EventArgs e)
         {
+            Form1.buttonSound.Play();
+
             // Exits the game
             Application.Exit();
         }

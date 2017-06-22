@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Media;
 using System.IO;
 using System.Threading;
+using System.Windows.Media;
 
 namespace Super_Mario_Bros
 {
@@ -83,11 +84,36 @@ namespace Super_Mario_Bros
 
             // Resets current score
             Form1.currentScore = 0;
-            
-            // Soudnds
-            Form1.a1 = new System.Windows.Media.MediaPlayer();
-            Form1.a1.Open(new Uri(Application.StartupPath + "/Resources/Coin.wav"));
 
+            #region Sounds
+            // Soudnds
+            //Form1.kickingSound = new System.Windows.Media.MediaPlayer();
+            //Form1.kickingSound.Open(new Uri(Application.StartupPath + "/Resources/KickingSound.wav"));
+
+            Form1.enterLevelSound = MakePlayer(Form1.enterLevelSound, "EnterLevel.wav");
+            Form1.jumpSound = MakePlayer(Form1.enterLevelSound, "Jump.wav");
+            Form1.levelClearSound = MakePlayer(Form1.enterLevelSound, "LevelClear.wav");
+            Form1.lifeLossSound = MakePlayer(Form1.enterLevelSound, "LifeLoss.wav");
+            Form1.oneUpSound = MakePlayer(Form1.enterLevelSound, "OneUp.wav");
+            Form1.pauseSound = MakePlayer(Form1.enterLevelSound, "Pause.wav");
+            Form1.powerUpSound = MakePlayer(Form1.enterLevelSound, "PowerUp.wav");
+            Form1.runningOutOfTimeSound = MakePlayer(Form1.enterLevelSound, "RunningOutOfTime.wav");
+            //Form1.buttonSound = MakePlayer(Form1.enterLevelSound, "Stomp.wav");
+            Form1.kickingSound = MakePlayer(Form1.enterLevelSound, "KickingSound.wav"); 
+        #endregion
+    }
+        /// <summary>
+        /// Takes a null MediaPlayer and gives it a sound directory link
+        /// </summary>
+        /// <param name="mp"></param>
+        /// <param name="soundName"></param>
+        /// <returns>Full initiated media player</returns>
+        public static MediaPlayer MakePlayer(MediaPlayer mp, string soundName)
+        {
+            mp = new MediaPlayer();
+            mp.Open(new Uri(Application.StartupPath + "/Resources/" + soundName));
+            mp.Volume = 1;
+            return mp;
         }
 
         public void OnLose()
@@ -123,7 +149,6 @@ namespace Super_Mario_Bros
             Enemy goomba = new Enemy(800, 430, 67, 80, 3, 3, Sprites.Goomba);
             Thread.Sleep(300);
             enemies.Add(goomba);
-            Form1.a1.Play();
         }
 
         #region Timer Ticks
@@ -174,13 +199,18 @@ namespace Super_Mario_Bros
 
                 if (mario.enemyCollision(enemies[i]))
                 {
+                    Form1.kickingSound.Stop();
+                    Form1.kickingSound.Play();
                     if (enemies[i].TopCollision(mario))
                     {
                         enemies.Remove(enemies[i]);
                         AddEnemy();
                     }
                     else
+                    {
                         OnLose();
+                    }
+                        
                 }
             }       
             //foreach (Enemy en in enemies)
