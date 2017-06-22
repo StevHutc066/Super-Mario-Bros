@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 using System.IO;
+using System.Threading;
 
 namespace Super_Mario_Bros
 {
@@ -82,6 +83,10 @@ namespace Super_Mario_Bros
 
             // Resets current score
             Form1.currentScore = 0;
+            
+            // Soudnds
+            Form1.a1 = new System.Windows.Media.MediaPlayer();
+            Form1.a1.Open(new Uri(Application.StartupPath + "/Resources/Coin.wav"));
 
         }
 
@@ -116,7 +121,9 @@ namespace Super_Mario_Bros
         public void AddEnemy()
         {
             Enemy goomba = new Enemy(800, 430, 67, 80, 3, 3, Sprites.Goomba);
+            Thread.Sleep(300);
             enemies.Add(goomba);
+            Form1.a1.Play();
         }
 
         #region Timer Ticks

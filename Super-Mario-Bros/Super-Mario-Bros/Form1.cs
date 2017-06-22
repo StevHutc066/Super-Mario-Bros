@@ -24,7 +24,15 @@ namespace Super_Mario_Bros
         public static Label scoreLabel = new Label();
         public static Label timeLabel = new Label();
 
-        
+        //Sounds
+        public static System.Windows.Media.MediaPlayer a1;
+        public static System.Windows.Media.MediaPlayer a2;
+        public static System.Windows.Media.MediaPlayer a3;
+        public static System.Windows.Media.MediaPlayer a4;
+        public static System.Windows.Media.MediaPlayer a5;
+        public static System.Windows.Media.MediaPlayer a6;
+        public static System.Windows.Media.MediaPlayer a7;
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
